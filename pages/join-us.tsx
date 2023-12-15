@@ -5,10 +5,10 @@ function JoinUs() {
     <div className="bg-gray-100 bg-cover pt-10 pb-10">
       <div className="min-h-screen flex items-center justify-center  mt-12 mb-12 border border-gray-100 max-w-4xl mx-auto">
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-900 w-full">
-        <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
-          <img src="/vector.svg" className="mr-2" alt="" />
-          <img src="/mavride.svg" alt="" />
-        </div>
+          <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
+            <img src="/vector.svg" className="mr-2" alt="" />
+            <img src="/mavride.svg" alt="" />
+          </div>
           <h2 className="text-3xl font-bold mb-6">EMPLOYMENT FORM</h2>
 
           {/* Personal Information */}
@@ -26,6 +26,33 @@ function JoinUs() {
               <div>
                 <label className="block mb-2 font-semibold">Last Name:</label>
                 <input type="text" className="border p-2 w-full" />
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold">Preferred Name:</label>
+                <input type="text" className="border p-2 w-full" />
+              </div>
+            </div>
+          </div>
+
+          {/* Contacts */}
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold mb-2">Contacts</h3>
+            <div className="grid grid-cols-2 gap-4 space-x-6">
+              <div>
+                <label className="block mb-2 font-semibold">Home Phone Number:</label>
+                <input type="tel" className="border p-2 w-full" />
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold">Cell Phone Number:</label>
+                <input type="tel" className="border p-2 w-full" />
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold">Preferred Phone Number:</label>
+                <input type="tel" className="border p-2 w-full" />
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold">Email:</label>
+                <input type="email" className="border p-2 w-full" />
               </div>
             </div>
           </div>
