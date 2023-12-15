@@ -16,15 +16,15 @@ function JoinUs() {
             <h3 className="text-2xl font-bold mb-2">Personal Information</h3>
             <div className="grid grid-cols-2 space-x-6 gap-4">
               <div>
-                <label className="block mb-2">First Name:</label>
+                <label className="block mb-2 font-semibold">First Name:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
               <div>
-                <label className="block mb-2">Middle Name:</label>
+                <label className="block mb-2 font-semibold">Middle Name:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
               <div>
-                <label className="block mb-2">Last Name:</label>
+                <label className="block mb-2 font-semibold">Last Name:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
             </div>
@@ -35,19 +35,19 @@ function JoinUs() {
             <h3 className="text-2xl font-bold mb-2">Address Information</h3>
             <div className="grid grid-cols-2 gap-4 space-x-6">
               <div className="mb-4">
-                <label className="block mb-2">Street Address:</label>
+                <label className="block mb-2 font-semibold">Street Address:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
               <div className="mb-4">
-                <label className="block mb-2">City:</label>
+                <label className="block mb-2 font-semibold">City:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
               <div className="mb-4">
-                <label className="block mb-2">State:</label>
+                <label className="block mb-2 font-semibold">State:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
               <div>
-                <label className="block mb-2">Zip:</label>
+                <label className="block mb-2 font-semibold">Zip:</label>
                 <input type="text" className="border p-2 w-full" />
               </div>
             </div>
@@ -55,12 +55,12 @@ function JoinUs() {
 
           {/* Position Applied For */}
           <div className="mb-4">
-            <label className="block mb-2">Position applied for:</label>
+            <label className="block mb-2 font-semibold">Position applied for:</label>
             <input type="text" className="border p-2 w-full" />
           </div>
 
           <div className="mb-4">
-            <label className="block mb-2">How many hours can you work a week?</label>
+            <label className="block mb-2 font-semibold">How many hours can you work a week?</label>
             <input type="number" className="border p-2 w-full" />
           </div>
 
@@ -68,7 +68,7 @@ function JoinUs() {
           <h2 className="text-2xl font-bold mb-4">EMPLOYMENT ELIGIBILITY</h2>
 
           <div className="mb-4">
-            <label className="block mb-2">Are you legally authorized to work in the United States?</label>
+            <label className="block mb-2 font-semibold">Are you legally authorized to work in the United States?</label>
             <div className="grid grid-cols-2 gap-4">
               <label>
                 <input type="radio" name="authorized" className="mr-2" /> Yes
@@ -80,7 +80,7 @@ function JoinUs() {
           </div>
 
           <div className="mb-4">
-            <label className="block mb-2">Do you require Visa Sponsorship?</label>
+            <label className="block mb-2 font-semibold">Do you require Visa Sponsorship?</label>
             <div className="grid grid-cols-2 gap-4">
               <label>
                 <input type="radio" name="visaSponsorship" className="mr-2" /> Yes
@@ -112,7 +112,7 @@ function JoinUs() {
           </div>
 
           <div className="mb-4">
-            <label className="block mb-2">Have you ever worked for this employer?</label>
+            <label className="block mb-2 font-semibold">Have you ever worked for this employer?</label>
             <div className="grid grid-cols-2 gap-4">
               <label>
                 <input type="radio" name="workedForEmployer" className="mr-2" /> Yes
@@ -122,7 +122,7 @@ function JoinUs() {
               </label>
             </div>
             <div>
-              <label className="block mb-2">If Yes, write the start and end dates:</label>
+              <label className="block mb-2 font-semibold">If Yes, write the start and end dates:</label>
               <input type="text" className="border p-2 w-full" />
             </div>
           </div>

@@ -25,7 +25,7 @@ const Fleet = () => {
           <Card
             title={"Medical Vehicle/Gurney"}
             desc="Outfitted with the latest in technology, onboard entertainment, a professional medical staff, and space for family members, our medical van is perfect for longer distances and special care needs."
-            image="fleet-3"
+            image="GUNER"
           />
         </div>
       </div>
