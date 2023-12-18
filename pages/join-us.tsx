@@ -54,10 +54,6 @@ function JoinUs() {
             <img src="/vector.svg" className="mr-2" alt="" />
             <img src="/mavride.svg" alt="" />
           </div>
-          <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
-            <img src="/vector.svg" className="mr-2" alt="" />
-            <img src="/mavride.svg" alt="" />
-          </div>
           <h2 className="text-3xl font-bold mb-6">EMPLOYMENT FORM</h2>
 
           {/* Personal Information */}
