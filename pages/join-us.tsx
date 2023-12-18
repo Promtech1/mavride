@@ -1,25 +1,42 @@
-"use client"
-import { useRef } from "react";
-import emailjs from "@emailjs/browser"
+import { FormEvent, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
-import Image from "next/image";
+import 'react-toastify/dist/ReactToastify.css';
+
+const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+const globalEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL as string;
 
 function JoinUs() {
-  const form: any=useRef()
+    const form = useRef<HTMLFormElement>(null);
 
+    const sendmail = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!form.current) return;
 
-  const sendmail=(e: any)=> {
-    e.preventDefault()
-    emailjs.sendForm("service_b78zy62", "template_sldkva8", form.current, "E44WbEbAmymctfbwa")
-      .then(() =>{
-        toast.success("message send") 
-      },()=>{
-        toast.error("something is wrong")
-      })
-      e.target.reset()
+        const formData = new FormData(form.current);
 
-  }
+        let messageBody = "";
+        formData.forEach((value, key) => {
+            messageBody += `${key}: ${value}\n`;
+        });
+
+        const emailData = {
+            user_name: formData.get('user_name') as string,
+            user_email: globalEmail,
+            message: messageBody,
+        };
+
+        emailjs.send(serviceId, templateId, emailData, publicKey)
+            .then(() => {
+                toast.success("Message sent successfully");
+            }, (error) => {
+                toast.error("Failed to send message: " + error.text);
+            });
+        (e.target as HTMLFormElement).reset();
+    };
+
   // async function handleOnSubmit(e) {
   //   e.preventDefault();
   //   const formData = {}
@@ -33,6 +50,10 @@ function JoinUs() {
     <div className="bg-gray-100 bg-cover pt-10 pb-10">
       <div className="min-h-screen flex items-center justify-center  mt-12 mb-12 border border-gray-100 max-w-4xl mx-auto">
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-900 w-full">
+          <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
+            <img src="/vector.svg" className="mr-2" alt="" />
+            <img src="/mavride.svg" alt="" />
+          </div>
           <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
             <img src="/vector.svg" className="mr-2" alt="" />
             <img src="/mavride.svg" alt="" />
