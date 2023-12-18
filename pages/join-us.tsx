@@ -1,6 +1,34 @@
+"use client"
+import { useRef } from "react";
+import emailjs from "@emailjs/browser"
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 import Image from "next/image";
 
 function JoinUs() {
+  const form: any=useRef()
+
+
+  const sendmail=(e: any)=> {
+    e.preventDefault()
+    emailjs.sendForm("service_b78zy62", "template_sldkva8", form.current, "E44WbEbAmymctfbwa")
+      .then(() =>{
+        toast.success("message send") 
+      },()=>{
+        toast.error("something is wrong")
+      })
+      e.target.reset()
+
+  }
+  // async function handleOnSubmit(e) {
+  //   e.preventDefault();
+  //   const formData = {}
+  //   Array.from(e.currentTarget.elements).forEach(field => {
+  //     if ( !field.name ) return;
+  //     formData[field.name] = field.value;
+  //   });
+  //   console.log(formData);
+  // }
   return (
     <div className="bg-gray-100 bg-cover pt-10 pb-10">
       <div className="min-h-screen flex items-center justify-center  mt-12 mb-12 border border-gray-100 max-w-4xl mx-auto">
@@ -12,152 +40,160 @@ function JoinUs() {
           <h2 className="text-3xl font-bold mb-6">EMPLOYMENT FORM</h2>
 
           {/* Personal Information */}
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold mb-2">Personal Information</h3>
-            <div className="grid grid-cols-2 space-x-6 gap-4">
-              <div>
-                <label className="block mb-2 font-semibold">First Name:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Middle Name:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Last Name:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Preferred Name:</label>
-                <input type="text" className="border p-2 w-full" />
+          {/* onSubmit={handleOnSubmit} */}
+
+          <form ref={form} onSubmit={sendmail} action="" method="post">  
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold mb-2">Personal Information</h3>
+              <div className="grid grid-cols-2 space-x-6 gap-4">
+                <div>
+                  <label className="block mb-2 font-semibold">First Name:</label>
+                  <input type="text" name="firstname" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Middle Name:</label>
+                  <input type="text" name="middlename" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Last Name:</label>
+                  <input type="text" name="lastname" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Preferred Name:</label>
+                  <input type="text" name="preferredname" className="border p-2 w-full" required/>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Contacts */}
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold mb-2">Contacts</h3>
-            <div className="grid grid-cols-2 gap-4 space-x-6">
-              <div>
-                <label className="block mb-2 font-semibold">Home Phone Number:</label>
-                <input type="tel" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Cell Phone Number:</label>
-                <input type="tel" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Preferred Phone Number:</label>
-                <input type="tel" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Email:</label>
-                <input type="email" className="border p-2 w-full" />
+            {/* Contacts */}
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold mb-2">Contacts</h3>
+              <div className="grid grid-cols-2 gap-4 space-x-6">
+                <div>
+                  <label className="block mb-2 font-semibold">Home Phone Number:</label>
+                  <input type="tel" name="home_phone_number" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Cell Phone Number:</label>
+                  <input type="tel" name="cell_phone_number" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Preferred Phone Number:</label>
+                  <input type="tel" name="preferred_phone_number" className="border p-2 w-full" required/>
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Email:</label>
+                  <input name="email" type="email" className="border p-2 w-full" required/>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Address Information */}
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold mb-2">Address Information</h3>
-            <div className="grid grid-cols-2 gap-4 space-x-6">
-              <div className="mb-4">
-                <label className="block mb-2 font-semibold">Street Address:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 font-semibold">City:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2 font-semibold">State:</label>
-                <input type="text" className="border p-2 w-full" />
-              </div>
-              <div>
-                <label className="block mb-2 font-semibold">Zip:</label>
-                <input type="text" className="border p-2 w-full" />
+            {/* Address Information */}
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold mb-2">Address Information</h3>
+              <div className="grid grid-cols-2 gap-4 space-x-6">
+                <div className="mb-4">
+                  <label className="block mb-2 font-semibold">Street Address:</label>
+                  <input type="text" className="border p-2 w-full" />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-2 font-semibold">City:</label>
+                  <input type="text" className="border p-2 w-full" />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-2 font-semibold">State:</label>
+                  <input type="text" className="border p-2 w-full" />
+                </div>
+                <div>
+                  <label className="block mb-2 font-semibold">Zip:</label>
+                  <input type="text" className="border p-2 w-full" />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Position Applied For */}
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Position applied for:</label>
-            <input type="text" className="border p-2 w-full" />
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">How many hours can you work a week?</label>
-            <input type="number" className="border p-2 w-full" />
-          </div>
-
-          {/* Employment Eligibility */}
-          <h2 className="text-2xl font-bold mb-4">EMPLOYMENT ELIGIBILITY</h2>
-
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Are you legally authorized to work in the United States?</label>
-            <div className="grid grid-cols-2 gap-4">
-              <label>
-                <input type="radio" name="authorized" className="mr-2" /> Yes
-              </label>
-              <label>
-                <input type="radio" name="authorized" className="mr-2" /> No
-              </label>
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Do you require Visa Sponsorship?</label>
-            <div className="grid grid-cols-2 gap-4">
-              <label>
-                <input type="radio" name="visaSponsorship" className="mr-2" /> Yes
-              </label>
-              <label>
-                <input type="radio" name="visaSponsorship" className="mr-2" /> No
-              </label>
-            </div>
-            <div>
-              <label className="block mb-2">If yes, please confirm Visa type & expiration date:</label>
+            {/* Position Applied For */}
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold">Position applied for:</label>
               <input type="text" className="border p-2 w-full" />
             </div>
-          </div>
 
-          <div className="mb-4 ">
-            <label className="block mb-2 font-semibold">Have you ever been convicted of a misdemeanor or felony?</label>
-            <div className="grid grid-cols-2 gap-4">
-              <label>
-                <input type="radio" name="convicted" className="mr-2 font-medium" /> Yes
-              </label>
-              <label>
-                <input type="radio" name="convicted" className="mr-2 font-medium" /> No
-              </label>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold">How many hours can you work a week?</label>
+              <input type="number" className="border p-2 w-full" />
             </div>
-            <div className="font-semibold">
-              <label className="block mb-2">If yes, please elaborate:</label>
-              <input type="text" className="border p-2 w-full" />
-            </div>
-          </div>
 
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Have you ever worked for this employer?</label>
-            <div className="grid grid-cols-2 gap-4">
-              <label>
-                <input type="radio" name="workedForEmployer" className="mr-2" /> Yes
-              </label>
-              <label>
-                <input type="radio" name="workedForEmployer" className="mr-2" /> No
-              </label>
-            </div>
-            <div>
-              <label className="block mb-2 font-semibold">If Yes, write the start and end dates:</label>
-              <input type="text" className="border p-2 w-full" />
-            </div>
-          </div>
+            {/* Employment Eligibility */}
+            <h2 className="text-2xl font-bold mb-4">EMPLOYMENT ELIGIBILITY</h2>
 
-          {/* Submit Button */}
-          <div className="mt-6">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-pointer">Submit</button>
-          </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold">Are you legally authorized to work in the United States?</label>
+              <div className="grid grid-cols-2 gap-4">
+                <label>
+                  <input type="radio" name="authorized" className="mr-2" /> Yes
+                </label>
+                <label>
+                  <input type="radio" name="authorized" className="mr-2" /> No
+                </label>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold">Do you require Visa Sponsorship?</label>
+              <div className="grid grid-cols-2 gap-4">
+                <label>
+                  <input type="radio" name="visaSponsorship" className="mr-2" /> Yes
+                </label>
+                <label>
+                  <input type="radio" name="visaSponsorship" className="mr-2" /> No
+                </label>
+              </div>
+              <div>
+                <label  typeof="text" className="block mb-2">If yes, please confirm Visa type & expiration date:</label>
+                <input type="text" placeholder="message" className="border p-2 w-full" />
+              </div>
+            </div>
+
+            <div className="mb-4 ">
+              <label className="block mb-2 font-semibold">Have you ever been convicted of a misdemeanor or felony?</label>
+              <div className="grid grid-cols-2 gap-4">
+                <label>
+                  <input type="radio" name="convicted" className="mr-2 font-medium" /> Yes
+                </label>
+                <label>
+                  <input type="radio" name="convicted" className="mr-2 font-medium" /> No
+                </label>
+              </div>
+              <div className="font-semibold">
+                <label className="block mb-2">If yes, please elaborate:</label>
+                <input type="text" placeholder="message" className="border p-2 w-full" />
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <label className="block mb-2 font-semibold">Have you ever worked for this employer?</label>
+              <div className="grid grid-cols-2 gap-4">
+                <label>
+                  <input type="radio" name="workedForEmployer" className="mr-2" /> Yes
+                </label>
+                <label>
+                  <input type="radio" name="workedForEmployer" className="mr-2" /> No
+                </label>
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold">If Yes, write the start and end dates:</label>
+                <input type="text" placeholder="message" className="border p-2 w-full" />
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <div className="mt-6">
+              <button typeof="Submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-pointer">Submit</button>
+            </div>
+          </form>
+          <ToastContainer
+          position="top-center"
+          hideProgressBar={true}
+          autoClose={2000}/>
         </div>
       </div>
     </div>

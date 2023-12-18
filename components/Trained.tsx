@@ -14,19 +14,19 @@ const Trained = () => {
         <div className="">
           <div className="">
             <div className="text-[14px] mt-2 text-dimgray font-extralight">
-            <span className="font-bold">Driver training:</span> Comprehensive course for driver training and
+            <span className="font-bold">Driver Training:</span> Comprehensive course for driver training and
               safety. ctaa.org/pass-online
             </div>
             <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              <span className="font-bold">CPR/First aid:</span> Certification for emergency readiness,
+              <span className="font-bold">CPR/First Aid:</span> Certification for emergency readiness,
               redcross.org/take-a-class{" "}
             </div>
             <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              <span className="font-bold">Defensive driving:</span> Skills development for accident prevention.
+              <span className="font-bold">Defensive Driving:</span> Skills development for accident prevention.
               nsc.org{" "}
             </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Drug, alcohol, and background check: It is of extreme importance
+            <div className="text-[14px] mt-2 text-dimgray font-extralight mr-4">
+              <span className="font-bold">Drug, Alcohol, and Background Check:</span> It is of extreme importance
               to us at Mavride to ensure the trustworthiness and professionalism
               of our staff before employment and randomly while still employed
               with us. occusscreen.com, c-dat.net{" "}

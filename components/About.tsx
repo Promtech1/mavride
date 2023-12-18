@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -48,14 +49,14 @@ const About = () => {
             image="shield.svg"
           />
           <Card
-            title="Leadership"
-            desc='Meet our dedicated team and the consulting services that distinguish us in the NEMT landscape.'
-            image="alarm.svg"
-          />
-          <Card
             title="Partnership"
             desc='In our mission to serve every individual in need of Non-Emergency Medical Transport, we have been approved to operate in this industry, vetted by the highest security standards, and thus authorized to collaborate with our esteemed partners: Government, Health Insurance Companies, Hospitals, and Private Health.'
             image="handshake-1.svg"
+          />
+          <CardWithLink
+            title="Leadership"
+            desc='Meet our dedicated team and the consulting services that distinguish us in the NEMT landscape.'
+            image="alarm.svg"
           />
         </div>
       </div>
@@ -80,6 +81,25 @@ function Card({ title, desc, image }: Card) {
           {title}
         </div>
         <div className="text-[14px] text-dimgray">{desc}</div>
+      </div>
+    </div>
+  );
+}
+
+function CardWithLink({ title, desc, image }: Card) {
+  return (
+    <div className="p-5 py-10 border-b border-b-[#01119652] border-solid flex flex-col md:flex-row md:justify-between md:gap-5 md:items-center flex-1 relative">
+      <img src={"/"+image} className="mb-5 w-[60px] md:mb-0" alt="" />
+      <div>
+        <div className="text-[20px] text-midnightblue-100 font-bold">
+          {title}
+        </div>
+        <div className="text-[14px] text-dimgray">{desc}</div>
+        <div className="mt-2">
+          <Link href="/meet">
+            <p><span className="no-underline">>>></span></p>
+          </Link>
+        </div>
       </div>
     </div>
   );

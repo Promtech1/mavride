@@ -15,31 +15,16 @@ const Services = () => {
         </div>
         <div className="">
           <div className="">
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Medical appointments (doctor visits, chemotherapy, dialysis)
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Hospital admissions/discharges
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Rehab centre support
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Adult care facilities
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Bedside-to-bedside accompainment
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Interstate medical transport
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              Pharmacy pick-up
-            </div>
-            <div className="text-[14px] mt-2 text-dimgray font-extralight">
-              And all other places our members get Medicaid/Medicare and Private
-              health insurance services.
-            </div>
+            <ul>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Medical appointments (doctor visits, chemotherapy, dialysis)</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Hospital admissions/discharges</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Rehab centre support</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Adult care facilities</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Bedside-to-bedside accompaniment</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Interstate medical transport</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">Pharmacy pick-up</li>
+              <li className="text-[14px] mt-2 text-dimgray font-extralight">And all other places our members get Medicaid/Medicare and Private health insurance services.</li>
+            </ul>
           </div>
           <div className="bg-mediumblue-100 text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded ">
             Get Started
@@ -48,8 +33,8 @@ const Services = () => {
       </div>
 
       <div className="mt-5 sm:mt-0">
-          <img className="w-full sm:min-w-[400px]" alt="" src="/services.png" />
-        </div>
+        <img className="w-full sm:min-w-[400px]" alt="" src="/services.png" />
+      </div>
     </div>
   );
 };
