@@ -102,7 +102,7 @@ function CardWithLink({ title, desc, image }: Card) {
         <div className="text-[14px] text-dimgray">{desc}</div>
         <div className="mt-2">
           <Link href="/meet">
-            <p><span className="no-underline">>>></span></p>
+            <p><span className="no-underline"></span></p>
           </Link>
         </div>
       </div>
