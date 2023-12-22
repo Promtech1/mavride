@@ -1,6 +1,14 @@
 import React from "react";
 
-const PortfolioCard = ({ title, description, writeUp, content }) => (
+interface PortfolioCardProps {
+  title: string;
+  description: string;
+  writeUp: string;
+  content: string;
+}
+
+
+const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, writeUp, content }) => (
   <div className="flex my-8 w-full md:w-1/2 text-black">
     {/* Left side - Portfolio description */}
     <div className="w-full pr-4">
