@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -26,9 +27,13 @@ const Services = () => {
               <li className="text-[14px] mt-2 text-dimgray font-extralight">And all other places our members get Medicaid/Medicare and Private health insurance services.</li>
             </ul>
           </div>
-          <div className="bg-mediumblue-100 text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded ">
-            Get Started
-          </div>
+          
+          {/* <div>
+          Get Started
+          </div> */}
+          
+        
+        
         </div>
       </div>
 

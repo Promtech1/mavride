@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Quote() {
   return (
     <div className="bg-[#F3F4FD] px-[15px] md:px-[30px] lg:py-[60px] py-10">
@@ -11,9 +13,11 @@ export default function Quote() {
           request and we’ll handle the rest.
         </div>
 
-        <div className="bg-mediumblue-100 text-white text-center w-fit p-3 mx-auto rounded px-10">
-          Sign me up
-        </div>
+        <Link href={"/join-us"} className="flex justify-center no-underline">
+          <button className="bg-mediumblue-100 text-white text-center w-fit p-3 mx-auto rounded px-10 cursor-pointer">
+            Request Quote
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -6,25 +6,30 @@ import Link from "next/link";
 const About = () => {
   return (
     <div>
-      <div className="bg-midnightblue-200 text-white p-4 rounded-13xl md:w-full md:flex">
-        <div className="">
+      <div className="bg-midnightblue-200 text-white p-4 rounded-13xl md:w-full mx-auto">
+        <div className="text-center mx-auto">
           <h1 className="text-[32px] font-bold">About Us</h1>
-          <p className="text-base md:w-[65%]">
+          <p className="text-base md:w-[95%] mx-auto leading-6">
             We don&apos;t just transport you to your appointments. we are a part of
             your health journey. Our mission, vision, and values reflect our
             dedication
-          </p>
+          
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel blanditiis tempora, aliquid esse excepturi, aperiam error iusto cumque exercitationem cupiditate illum quas quibusdam distinctio dolore pariatur. Fuga alias consequuntur necessitatibus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae excepturi libero delectus quas minus nostrum eveniet nulla dolorum expedita sequi quaerat cupiditate ad animi, et similique tenetur exercitationem dolore cumque amet. Accusantium quidem provident ipsa magni harum, laudantium consequatur.
+          <br />
+          <br />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ex deserunt aliquam repudiandae alias eius illum officia nihil, tempora ea culpa quasi hic atque quam nobis eveniet architecto officiis pariatur provident aperiam nostrum, error debitis voluptatum! Eius labore doloribus veniam sequi enim, sed quam nostrum vitae accusantium ab non ullam?</p>
 
           <Button
-            className="text-mediumblue-100 bg-ghostwhite font-bold md:mt-20"
+            className="text-mediumblue-100 bg-ghostwhite font-bold md:mt-10"
             type="button"
-            title="Book a ride"
+            title="See More"
           />
         </div>
 
-        <div>
+        {/* <div>
           <img src="image-14@2x.png" alt="" className="w-full mt-6" />
-        </div>
+        </div> */}
       </div>
 
       <div className="border border-[#01119652] border-solid rounded-[40px] my-10 overflow-hidden md:flex md:flex-row">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <div>
@@ -21,7 +23,7 @@ export default function Contact() {
       <div className="">
         <div className="text-center">
           <div className="text-[14px] mt-2 text-dimgray font-extralight">
-            <span className="font-bold">Email address:</span> info@mavride.net
+            <span className="font-bold">Email address:</span> <Link className="no-underline" href={"info@mavride.net"}>info@mavride.net</Link>
           </div>
           <div className="text-[14px] mt-2 text-dimgray font-extralight">
             <span className="font-bold">Phone:</span> 281-985-9981
