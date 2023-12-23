@@ -1,0 +1,38 @@
+.main-about{
+    margin: 0 auto;
+    flex-direction: column;
+    
+}
+
+.navbar{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.main-about-wrapper{
+    
+}
+
+.training-main{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.training-main img{
+    width: 50%;
+    border-radius: 2em;
+}
+
+.training-text a{
+    color: rgb(8, 8, 110);
+}
+
+.training-text-main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

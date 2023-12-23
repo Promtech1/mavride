@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NavBar = () => {
   return (
     <>
@@ -5,10 +7,10 @@ const NavBar = () => {
         className="flex justify-between border-[10px] rounded-2xl overflow-x-hidden md:hidden"
         style={{ border: "0.1px #01119652 solid" }}
       >
-        <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
+        <Link href={"/"}><div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
           <img src="/vector.svg" className="mr-2" alt="" />
           <img src="/mavride.svg" alt="" />
-        </div>
+        </div></Link>
 
         <div className="bg-mediumblue-100 flex justify-center items-center px-4 ">
           <img src="/grid.svg" alt="" />
@@ -18,10 +20,10 @@ const NavBar = () => {
       <header className="rounded-2xl overflow-x-hidden md:flex hidden"
         style={{ border: "0.1px #01119652 solid" }}
       >
-        <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
+        <Link href={"/"}><div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
           <img src="/vector.svg" className="mr-2 h-[40px]" alt="" />
           <img src="/mavride.svg" alt="" />
-        </div>
+        </div></Link>
 
         <div></div>
 
