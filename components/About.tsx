@@ -6,25 +6,23 @@ import Link from "next/link";
 const About = () => {
   return (
     <div>
-      <div className="bg-midnightblue-200 text-white p-4 rounded-13xl md:w-full mx-auto">
+      <div className="bg-midnightblue-200 text-white p-4 pb-10 rounded-13xl md:w-full mx-auto">
         <div className="text-center mx-auto">
           <h1 className="text-[32px] font-bold">About Us</h1>
           <p className="text-base md:w-[95%] mx-auto leading-6">
-            We don&apos;t just transport you to your appointments. we are a part of
-            your health journey. Our mission, vision, and values reflect our
-            dedication
-          
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel blanditiis tempora, aliquid esse excepturi, aperiam error iusto cumque exercitationem cupiditate illum quas quibusdam distinctio dolore pariatur. Fuga alias consequuntur necessitatibus?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae excepturi libero delectus quas minus nostrum eveniet nulla dolorum expedita sequi quaerat cupiditate ad animi, et similique tenetur exercitationem dolore cumque amet. Accusantium quidem provident ipsa magni harum, laudantium consequatur.
-          <br />
-          <br />
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ex deserunt aliquam repudiandae alias eius illum officia nihil, tempora ea culpa quasi hic atque quam nobis eveniet architecto officiis pariatur provident aperiam nostrum, error debitis voluptatum! Eius labore doloribus veniam sequi enim, sed quam nostrum vitae accusantium ab non ullam?</p>
+          Mavride is a Tech-powered Non Emergency Medical Transportation company that ensures seamless mobility for individuals with non emergency medical needs: hospital visits, pharmacy pick ups, doctors appointments, counseling and therapy sessions, by providing our fleet of vehicles - Sedan/Ambulatory, Wheelchair, and Gurney throughout: Houston, Harris, Fortbend, Galveston, Brazoria, Montgomery counties and other nearby areas.
 
-          <Button
+          
+          We don’t just transport you to your appointments, we are a part of your health journey and our values, mission and vision reflect our dedication, fostering partnership and collaboration with stakeholders in the NEMT space through trainings, programs, and events, to improve non-emergency medical transportation services and increased access to the underserved population.
+          <br />
+          <br />
+          Powered by cutting edge technology and a team of professionally qualified and emotionally intelligent staff, we guarantee a steadfast commitment to providing safe, reliable, compassionate and accessible transportation, by streamlining NEMT operations, enhancing communication, and effective tracking to ensure a comfortable, safe, and secure clients journey to and from their medical appointments.</p>
+
+          {/* <Button
             className="text-mediumblue-100 bg-ghostwhite font-bold md:mt-10"
             type="button"
             title="See More"
-          />
+          /> */}
         </div>
 
         {/* <div>
