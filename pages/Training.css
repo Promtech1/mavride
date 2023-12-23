@@ -10,9 +10,6 @@
     padding-top: 50px;
 }
 
-.main-about-wrapper{
-    
-}
 
 .training-main{
     display: flex;
@@ -23,8 +20,12 @@
 }
 
 .training-main img{
-    width: 50%;
+    width: 50% !important;
     border-radius: 2em;
+}
+
+.training-text{
+    flex-basis: 50% !important;
 }
 
 .training-text a{
@@ -35,4 +36,22 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    
+}
+
+@media screen and (max-width: 838px){
+    .training-main{
+        flex-direction: column;
+    }
+
+    .training-main img{
+        width: 80% !important;
+        
+    }
+}
+
+@media screen and (max-width: 412px){
+    .training-main img{
+        width: 100% !important;
+    }
 }
