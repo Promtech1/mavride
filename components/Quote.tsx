@@ -13,7 +13,7 @@ export default function Quote() {
           request and we’ll handle the rest.
         </div>
 
-        <Link href={"/join-us"} className="flex justify-center no-underline">
+        <Link href={"/quoteForm"} className="flex justify-center no-underline">
           <button className="bg-mediumblue-100 text-white text-center w-fit p-3 mx-auto rounded px-10 cursor-pointer">
             Request Quote
           </button>

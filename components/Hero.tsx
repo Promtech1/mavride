@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import Button from "./Button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,11 +16,16 @@ const Hero = () => {
           commitment to providing safe, secure, and stylish transportation
           services, we ensure you arrive on time for your healthcare
           appointments. Experience the ease and peace of mind that comes with
-          scheduling a ride through Mavride with a guaranteed promise of care.
+          scheduling a ride with a guaranteed promise of care.
         </p>
       </div>
       <img className="mt-4 md:hidden w-full" alt="" src="/rectangle-4@2x.png" />
       <img className="mt-4 w-full hidden md:inline" alt="" src="/rectangle_full.png" />
+      <Link href={"/applicationForm"}>
+          <button className="bg-mediumblue-100 text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded cursor-pointer ">
+           Book a Ride
+          </button>
+          </Link>
     </div>
   );
 };

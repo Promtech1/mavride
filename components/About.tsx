@@ -9,14 +9,10 @@ const About = () => {
       <div className="bg-midnightblue-200 text-white p-4 pb-10 rounded-13xl md:w-full mx-auto">
         <div className="text-center mx-auto">
           <h1 className="text-[32px] font-bold">About Us</h1>
-          <p className="text-base md:w-[95%] mx-auto leading-6">
-          Mavride is a Tech-powered Non Emergency Medical Transportation company that ensures seamless mobility for individuals with non emergency medical needs: hospital visits, pharmacy pick ups, doctors appointments, counseling and therapy sessions, by providing our fleet of vehicles - Sedan/Ambulatory, Wheelchair, and Gurney throughout: Houston, Harris, Fortbend, Galveston, Brazoria, Montgomery counties and other nearby areas.
-
-          
-          We don’t just transport you to your appointments, we are a part of your health journey and our values, mission and vision reflect our dedication, fostering partnership and collaboration with stakeholders in the NEMT space through trainings, programs, and events, to improve non-emergency medical transportation services and increased access to the underserved population.
+          <p className="text-base md:w-[90%] mx-auto leading-6">Mavride is a Non-Emergency Medical Transportation company that ensures seamless mobility for individuals with non-emergency medical needs: hospital visits, pharmacy pick-ups, counseling, and therapy sessions, by providing our fleet of vehicles throughout Texas.
           <br />
           <br />
-          Powered by cutting edge technology and a team of professionally qualified and emotionally intelligent staff, we guarantee a steadfast commitment to providing safe, reliable, compassionate and accessible transportation, by streamlining NEMT operations, enhancing communication, and effective tracking to ensure a comfortable, safe, and secure clients journey to and from their medical appointments.</p>
+          We are a part of your health journey fostering partnerships and collaboration with stakeholders in the NEMT space through training, programs, and events to improve non-emergency medical transportation services and increase access to the underserved population.</p>
 
           {/* <Button
             className="text-mediumblue-100 bg-ghostwhite font-bold md:mt-10"

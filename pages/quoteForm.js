@@ -1,0 +1,450 @@
+"use client";
+import React, { useState } from "react";
+
+const Quote = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    contactNumber: "",
+    email: "",
+    pickup: {
+      streetAddress: "",
+      aptSuite: "",
+      city: "",
+      state: "",
+      zip: "",
+    },
+    dropoff: {
+      streetAddress: "",
+      aptSuite: "",
+      city: "",
+      state: "",
+      zip: "",
+    },
+    appointmentDate: "",
+    appointmentTime: "",
+    oneWayRoundTrip: "",
+    modeOfTransportation: "",
+    otherSpecificInfo: "",
+  });
+  const modeOfTransportation = [
+    "Wheelchair",
+    "Sedan",
+    "Gurney/Stretcher",
+  ];
+  const [errors, setErrors] = useState({});
+  const [errmsg, setErrmsg] = useState("");
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    if (name.includes(".")) {
+      const [parent, child] = name.split(".");
+      setFormData((prevData) => ({
+        ...prevData,
+        [parent]: {
+          ...prevData[parent],
+          [child]: type === "checkbox" ? checked : value,
+        },
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: type === "checkbox" ? checked : value,
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Required fields
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First Name is required";
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last Name is required";
+    }
+    if (!formData.contactNumber.trim()) {
+      newErrors.contactNumber = "Contact Number is required";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email.trim() && !emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Invalid email format";
+    }
+
+    // Phone number format validation
+    const phoneRegex = /^\d{10}$/;
+    if (
+      formData.contactNumber.trim() &&
+      !phoneRegex.test(formData.contactNumber.trim())
+    ) {
+      newErrors.contactNumber = "Invalid phone number format";
+    }
+
+    // Date and time validation (in the future)
+    const currentDate = new Date();
+    const selectedDate = new Date(
+      `${formData.appointmentDate}T${formData.appointmentTime}`
+    );
+
+    if (selectedDate <= currentDate) {
+      newErrors.appointmentDate = "Appointment must be scheduled for the future";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      setErrmsg("");
+      console.log(formData);
+    }
+    else {
+      setErrmsg("Please fill out all required fields");
+    }
+
+  };
+
+  return (
+    <main className="flex flex-col gap-4 w-full md:w-auto min-h-screen py-4 px-4 bg-white text-gray-700">
+      <section className="text-white flex flex-col gap-4 items-center justify-center w-full md:w-auto h-4/5 md:h-full bg-gradient-to-tr from-sky-900 to-blue-800 rounded-lg shadow-slate-100 shadow-2xl p-10">
+        <h3 className="font-bold text-4xl">Request a Quote</h3>
+        <p className=" pt-2">
+          Fill out the form below to get a quote for your trip.
+        </p>
+      </section>
+      <section className="mt-10">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
+          <h3 className="font-bold text-2xl mb-4">Personal Information</h3>
+          <div className="flex md:flex-nowrap flex-wrap gap-4">
+            <div className="flex flex-col gap-4 w-full ">
+              <label htmlFor="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full ">
+              <label className="" htmlFor="lastName">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="contactNumber">
+                Contact Number
+              </label>
+              <input
+                type="tel"
+                id="contactNumber"
+                name="contactNumber"
+                value={formData.contactNumber}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="email">
+                Email
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <h3 className="font-bold text-2xl mt-4 mb-4">Pickup</h3>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="streetAddress">
+                Street Address
+              </label>
+              <input
+                type="text"
+                id="streetAddress"
+                name="pickup.streetAddress"
+                value={formData.pickup.streetAddress}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="aptSuite">
+                Apt/Suite
+              </label>
+              <input
+                type="text"
+                id="aptSuite"
+                name="pickup.aptSuite"
+                value={formData.pickup.aptSuite}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="city">
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                name="pickup.city"
+                value={formData.pickup.city}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="state">
+                State
+              </label>
+              <input
+                type="text"
+                id="state"
+                name="pickup.state"
+                value={formData.pickup.state}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="zip">
+                Zip
+              </label>
+              <input
+                type="text"
+                id="zip"
+                name="pickup.zip"
+                value={formData.pickup.zip}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <h3 className="font-bold text-2xl mt-4 mb-4">Dropoff</h3>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="streetAddress">
+                Street Address
+              </label>
+              <input
+                type="text"
+                id="streetAddress"
+                name="dropoff.streetAddress"
+                value={formData.dropoff.streetAddress}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="aptSuite">
+                Apt/Suite
+              </label>
+              <input
+                type="text"
+                id="aptSuite"
+                name="dropoff.aptSuite"
+                value={formData.dropoff.aptSuite}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap md:flex-nowrap gap-4 mt-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="city">
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                name="dropoff.city"
+                value={formData.dropoff.city}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="state">
+                State
+              </label>
+              <input
+                type="text"
+                id="state"
+                name="dropoff.state"
+                value={formData.dropoff.state}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="zip">
+                Zip
+              </label>
+              <input
+                type="text"
+                id="zip"
+                name="dropoff.zip"
+                value={formData.dropoff.zip}
+                onChange={handleChange}
+                placeholder=""
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <h3 className="font-bold text-2xl mt-4 mb-4">Appointment</h3>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="appointmentDate">
+                Date
+              </label>
+              <input
+                type="date"
+                id="appointmentDate"
+                name="appointmentDate"
+                value={formData.appointmentDate}
+                onChange={handleChange}
+                placeholder="MM/DD/YYYY"
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              <label className="" htmlFor="appointmentTime">
+                Time
+              </label>
+              <input
+                type="time"
+                id="appointmentTime"
+                name="appointmentTime"
+                value={formData.appointmentTime}
+                onChange={handleChange}
+                placeholder="00:00 AM/PM"
+                className="border-2 border-gray-300 rounded-lg p-2"
+              />
+            </div>
+          </div>
+          <h3 className="font-bold text-2xl mt-4 mb-4">Trip Details</h3>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+            {/* One Way */}
+            <div className="flex flex-col gap-2">
+              <label htmlFor="oneWay">
+                One Way
+              </label>
+              <input
+                type="radio"
+                id="oneWay"
+                name="tripType"
+                value="One Way"
+                checked={formData.tripType === 'One Way'}
+                onChange={handleChange}
+                className="mr-2"
+              />
+            </div>
+
+            {/* Round Trip */}
+            <div className="flex flex-col gap-2">
+              <label htmlFor="roundTrip">
+                Round Trip
+              </label>
+              <input
+                type="radio"
+                id="roundTrip"
+                name="tripType"
+                value="Round Trip"
+                checked={formData.tripType === 'Round Trip'}
+                onChange={handleChange}
+                className="mr-2"
+              />
+            </div>
+
+            {/* Mode of Transportation */}
+            <div className="flex flex-col gap-4 w-full">
+              <label htmlFor="modeOfTransportation">
+                Mode of Transportation
+              </label>
+              <select
+                name="modeOfTransportation"
+                id="modeOfTransportation"
+                value={formData.modeOfTransportation}
+                onChange={handleChange}
+                className="border-2 border-gray-300 rounded-lg p-2"
+              >
+                {modeOfTransportation.map((mode) => (
+                  <option key={mode} value={mode}>
+                    {mode}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+        
+        <div className="flex flex-wrap md:flex-nowrap gap-4 mb-6">
+          <div className="flex flex-col gap-4 w-full">
+            <label className="" htmlFor="otherSpecificInfo">
+              Other Specific Info
+            </label>
+            <input
+              type="text"
+              id="otherSpecificInfo"
+              name="otherSpecificInfo"
+              value={formData.otherSpecificInfo}
+              onChange={handleChange}
+              placeholder=""
+              className="border-2 border-gray-300 rounded-lg p-2"
+            />
+          </div>
+        </div>
+
+        <button typeof="Submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg cursor-pointer">
+          Submit
+        </button>
+      </form>
+      {errmsg && (
+        <div className="mt-4 text-red-500">{errmsg}</div>
+      )}
+    </section>
+    </main >
+  );
+};
+
+export default Quote;

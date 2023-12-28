@@ -1,4 +1,6 @@
 import { FormEvent, useRef } from "react";
+import NavBar from '@/components/AnotherNav'
+import Footer from '@/components/Footer'
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,7 +49,10 @@ function JoinUs() {
   //   console.log(formData);
   // }
   return (
-    <div className="bg-gray-100 bg-cover pt-10 pb-10">
+    <div className="bg-gray-100 bg-cover">
+      <div className="navbar">
+            <NavBar/>
+          </div>
       <div className="min-h-screen flex items-center justify-center  mt-12 mb-12 border border-gray-100 max-w-4xl mx-auto">
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-900 w-full">
           <div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2 br-2">
@@ -213,6 +218,7 @@ function JoinUs() {
           autoClose={2000}/>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

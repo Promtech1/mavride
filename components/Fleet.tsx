@@ -18,7 +18,7 @@ const Fleet = () => {
             image="fleet-1"
           />
           <Card
-            title={"Wheel Chair"}
+            title={"Wheelchair"}
             desc="Equipped for comfort and ensuring smooth transport for our handicapped/disabled clients, with professional, qualified, and emotionally intelligent drivers to assist our clients."
             image="fleet-2"
           />
