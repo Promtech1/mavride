@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <title>Marvride</title>
+                <title>Mavride</title>
             </Head>
             <Component {...pageProps} />
         </>
