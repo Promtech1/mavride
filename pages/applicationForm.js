@@ -706,7 +706,7 @@ const Jobpage = () => {
       </section>
       {/* FOOTER */}
       <footer className="flex flex-col items-center justify-center w-full md:w-auto h-full bg-white rounded-lg shadow-2xl shadow-slate-100 p-10">
-        <h2 className="">@ {year} Drive with us</h2>
+        <h2 className="">@{year} Mavride</h2>
       </footer>
     </main>
   );
