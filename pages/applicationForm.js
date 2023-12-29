@@ -268,7 +268,7 @@ const Jobpage = () => {
           Drive with us
         </h1>
         <p className="text-center w-full md:w-4/5">
-          Drive with us is a non-emergency medical transportation company that
+          Mavride is a non-emergency medical transportation company that
           provides transportation services to the elderly and disabled. We are
           looking for drivers to join our team. If you are interested in joining
           our team, please fill out the form below.
