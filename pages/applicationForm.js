@@ -328,17 +328,7 @@ const Jobpage = () => {
                     className="border-2 border-gray-300 rounded-lg p-2"
                   />
                 </div>
-                <div className="flex flex-col gap-4 w-full ">
-                  <label htmlFor="middleName">Middle Name</label>
-                  <input
-                    type="text"
-                    name="middleName"
-                    id="middleName"
-                    value={formData.middleName}
-                    onChange={handleChange}
-                    className="border-2 border-gray-300 rounded-lg p-2"
-                  />
-                </div>
+                
                 <div className="flex flex-col gap-4 w-full ">
                   <label htmlFor="lastName">Last Name</label>
                   <input
