@@ -489,22 +489,22 @@ const Jobpage = () => {
                   </label>
                   <div className="flex gap-4">
                     <div className="flex items-center gap-4 w-max">
-                      <label htmlFor="yes">Yes</label>
+                      <label htmlFor="yes2">Yes</label>
                       <input
                         type="radio"
                         name="isAuthorizedToWork"
-                        id="yes"
+                        id="yes2"
                         value={true}
                         onChange={handleChange}
                         className="border-2 border-blue-300 rounded-lg p-4"
                       />
                     </div>
                     <div className="flex items-center gap-4 w-max">
-                      <label htmlFor="no">No</label>
+                      <label htmlFor="no2">No</label>
                       <input
                         type="radio"
                         name="isAuthorizedToWork"
-                        id="no"
+                        id="no2"
                         value={false}
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
@@ -523,22 +523,22 @@ const Jobpage = () => {
                   </label>
                   <div className="flex gap-4">
                     <div className="flex items-center gap-4 w-max">
-                      <label htmlFor="yes">Yes</label>
+                      <label htmlFor="yes3">Yes</label>
                       <input
                         type="radio"
                         name="hasWorkedForCompany"
-                        id="yes"
+                        id="yes3"
                         value={true}
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
                     </div>
                     <div className="flex items-center gap-4 w-max">
-                      <label htmlFor="no">No</label>
+                      <label htmlFor="no3">No</label>
                       <input
                         type="radio"
                         name="hasWorkedForCompany"
-                        id="no"
+                        id="no3"
                         value={false}
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
@@ -683,14 +683,30 @@ const Jobpage = () => {
               <label htmlFor="signature" className="font-medium">
                 Signature
               </label>
-              <input
-                type="text"
-                name="signature"
-                id="signature"
-                value={formData.signature}
-                onChange={handleChange}
-                className="border-2 border-gray-300 rounded-lg p-2"
-              />
+              <div className="flex gap-4">
+                    <div className="flex items-center gap-4 w-max">
+                      <label htmlFor="yes4">Yes</label>
+                      <input
+                        type="radio"
+                        name="signature"
+                        id="yes4"
+                        value={true}
+                        onChange={handleChange}
+                        className="border-2 border-gray-300 rounded-lg p-2"
+                      />
+                    </div>
+                    <div className="flex items-center gap-4 w-max">
+                      <label htmlFor="no4">No</label>
+                      <input
+                        type="radio"
+                        name="signature"
+                        id="no4"
+                        value={false}
+                        onChange={handleChange}
+                        className="border-2 border-gray-300 rounded-lg p-2"
+                      />
+                    </div>
+                  </div>
             </div>
           </div>
           {/* SUBMIT BUTTON */}
