@@ -8,8 +8,8 @@ const NavBar = () => {
         style={{ border: "0.1px #01119652 solid" }}
       >
         <Link href={"/"}><div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
-          <img src="/vector.svg" className="mr-2" alt="" />
-          <img src="/mavride.svg" alt="" />
+          <img src="/logo.png" className="mr-2 w-[130px]" alt="" />
+          
         </div></Link>
 
         <div className="bg-mediumblue-100 flex justify-center items-center px-4 ">
@@ -21,8 +21,7 @@ const NavBar = () => {
         style={{ border: "0.1px #01119652 solid" }}
       >
         <Link href={"/"}><div className="flex justify-between items-center w-fit bg-mediumblue-200 p-4 py-2">
-          <img src="/vector.svg" className="mr-2 h-[40px]" alt="" />
-          <img src="/mavride.svg" alt="" />
+          <img  src="/logo.png" className="mr-2 w-[130px] p-2 logo" alt="" />
         </div></Link>
 
         <div></div>
