@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
       <img className="mt-4 md:hidden w-full" alt="" src="/rectangle-4@2x.png" />
       <img className="mt-4 w-full hidden md:inline" alt="" src="/rectangle_full.png" />
-      <Link href={"/applicationForm"}>
+      <Link href={"/quoteForm"}>
           <button className="bg-mediumblue-100 text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded cursor-pointer ">
            Book a Ride
           </button>

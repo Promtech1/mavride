@@ -12,7 +12,7 @@ export default function ComeWork() {
           Interested in driving with us or becoming a part of our dedicated team? Visit our career page to view openings and submit an application.
           </div>
 
-            <Link href={"/join-us"} className="flex justify-center no-underline">
+            <Link href={"/applicationForm"} className="flex justify-center no-underline">
                 <button className="bg-mediumblue-100 text-white text-center w-fit p-3 mx-auto rounded px-10 cursor-pointer">
                     Join Us
                 </button>
