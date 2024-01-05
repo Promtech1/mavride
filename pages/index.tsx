@@ -1,5 +1,6 @@
+import MainNav from "@/components/MainNav";
 import About from "../components/About";
-import NavBar from "../components/AnotherNav";
+// import NavBar from "../components/AnotherNav";
 import BTWP from "../components/BetweenPages";
 import ComeWork from "../components/ComeWork";
 import Contact from "../components/Contact";
@@ -14,10 +15,11 @@ import Vetted from "../components/Vetted";
 export default function Index() {
     return (
         <main>
-            <div className="p-[15px] md:p-[30px] lg:p-[60px]">
+            <div className="p-[15px] md:p-[30px] lg:p-[30px] ">
                 {/* <Navbar />
     <Services /> */}
-                <NavBar />
+                {/* <NavBar /> */}
+                <MainNav/>
                 <BTWP />
                 <Hero />
                 <BTWP />

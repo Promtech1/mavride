@@ -1,6 +1,7 @@
 import NavBar from '@/components/AnotherNav'
 import ComeWork from '@/components/ComeWork'
 import Footer from '@/components/Footer'
+import MainNav from '@/components/MainNav'
 
 import React from 'react'
 
@@ -9,7 +10,8 @@ const Training = () => {
     <div className="main-about ">
         <div className="main-about-wrapper">
           <div className="navbar">
-            <NavBar/>
+            {/* <NavBar/> */}
+            <MainNav/>
           </div>
 
           <h3 className="capitalize m-0 text-[32px] lg:text-[64px] text-midnightblue-200 mb-5 text-center pt-20 pb-10">
