@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Link from "next/link";
 
 
 const MainNav = () => {
+    const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+    const toggleHamburger = () => {
+        setIsHamburgerOpen(!isHamburgerOpen);
+
+    }
+
   return (
     <div className="main-nav-container pl-8 pr-8">
         <div className="main-nav-wrapper">
@@ -20,6 +27,11 @@ const MainNav = () => {
                     <li className="get-started">Get Started</li>
                 </ul>
             </div>
+            {isHamburgerOpen ? (
+              <img src="/work-x.png" alt="close icon" className="close-icon ham cursor-pointer" onClick={toggleHamburger} />
+              ) : (
+                <img src="/hamburger-black.png" alt="logo" className=" nav-opacity hamburger ham cursor-pointer" onClick={toggleHamburger} />
+            )}
         </div>
     </div>
   )

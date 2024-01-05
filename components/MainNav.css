@@ -13,11 +13,19 @@
     list-style-type: none;
 }
 
-
+.nav-right ul li{
+    cursor: pointer;
+}
 
 .nav-right ul li a{
     font-size: 1.2rem;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
     text-decoration: none !important;
+}
+
+@media screen and (max-width: 746px){
+    .nav-right{
+        display: none;
+    }
 }

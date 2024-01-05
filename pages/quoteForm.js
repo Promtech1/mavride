@@ -115,7 +115,7 @@ const Quote = () => {
   return (
     <main className="flex flex-col gap-4 w-full md:w-auto min-h-screen py-4 px-4 bg-white text-gray-700">
       <section className="text-white flex flex-col gap-4 items-center justify-center w-full md:w-auto h-4/5 md:h-full bg-gradient-to-tr from-sky-900 to-blue-800 rounded-lg shadow-slate-100 shadow-2xl p-10">
-        <h3 className="font-bold text-4xl">Request a Quote</h3>
+        <h3 className="font-bold text-4xl">Book a Ride</h3>
         <p className=" pt-2">
           Fill out the form below to get a quote for your trip.
         </p>
