@@ -3,7 +3,7 @@ import React from "react";
 
 const Fleet = () => {
   return (
-    <div className="w-full">
+    <div className="pl-[30px] pr-[30px]">
       <div className="">
         <h1 className="text-center text-midnightblue-200 lg:text-[64px] m-0">Our fleet</h1>
         <div className="text-[16px] text-center text-[#4D506C] mb-10 lg:text-[20px]">

@@ -4,7 +4,7 @@ import React from "react";
 
 const Trained = () => {
   return (
-    <div className="flex flex-col justify-between sm:flex-row gap-10 sm:gap-32">
+    <div className="flex flex-col justify-between sm:flex-row gap-10 sm:gap-32 pl-[30px] pr-[30px]">
       <div className="md:w-[800px]">
         <h3 className="capitalize m-0 text-[32px] lg:text-[64px] text-midnightblue-200 mb-5">
           Trained and Certified

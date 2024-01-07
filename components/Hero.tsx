@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="pl-[30px] pr-[30px]">
       <div className="">
         <h1 className="text-midnightblue-100 lg:text-[64px] lg:text-center m-0">
           Your Journey To Wellness

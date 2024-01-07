@@ -8,10 +8,19 @@ const MainNav = () => {
     const toggleHamburger = () => {
         setIsHamburgerOpen(!isHamburgerOpen);
 
+        const navList = document.querySelector('.nav-mobile');
+        if (navList) {
+            if (isHamburgerOpen) {
+                navList.classList.remove('nav-list-open');
+            } else {
+                navList.classList.add('nav-list-open');
+            }
+        }
+
     }
 
   return (
-    <div className="main-nav-container pl-8 pr-8">
+    <div className="main-nav-container pl-[30px] pr-[30px]">
         <div className="main-nav-wrapper">
             <div className="nav-left">
                 <img src="/logo.png" className="mr-2 w-[130px]" alt="" />
@@ -27,12 +36,25 @@ const MainNav = () => {
                     <li className="get-started">Get Started</li>
                 </ul>
             </div>
-            {isHamburgerOpen ? (
-              <img src="/work-x.png" alt="close icon" className="close-icon ham cursor-pointer" onClick={toggleHamburger} />
-              ) : (
-                <img src="/hamburger-black.png" alt="logo" className=" nav-opacity hamburger ham cursor-pointer" onClick={toggleHamburger} />
-            )}
+            <div className="hamburger-main">
+                {isHamburgerOpen ? (
+                <img src="/work-x.png" alt="close icon" className="close-icon ham cursor-pointer" onClick={toggleHamburger} />
+                ) : (
+                    <img src="/hamburger-black.png" alt="logo" className=" nav-opacity hamburger ham cursor-pointer" onClick={toggleHamburger} />
+                )}
+            </div>
         </div>
+        <div className="nav-mobile ">
+                <ul>
+                    <li><Link href={"/"} className="active:white">
+                        Home
+                    </Link></li>
+                    <li>About</li>
+                    <li>Service</li>
+                    <li>Contact</li>
+                    <li className="get-started-mobile">Get Started</li>
+                </ul>
+            </div>
     </div>
   )
 }

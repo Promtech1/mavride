@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div>
-      <div className="bg-midnightblue-200 text-white p-4 pb-10 rounded-13xl md:w-90 mx-auto">
+    <div className="pl-[30px] pr-[30px]">
+      <div className="bg-midnightblue-200 text-white p-4 pb-10 rounded-13xl md:w-90 mx-auto ">
         <div className="text-center mx-auto">
           <h1 className="text-[32px] font-bold">About Us</h1>
           <p className="text-base md:w-[90%] mx-auto leading-6">Mavride is a Non-Emergency Medical Transportation company that ensures seamless mobility for individuals with non-emergency medical needs: hospital visits, pharmacy pick-ups, counseling, and therapy sessions, by providing our fleet of vehicles throughout Texas.

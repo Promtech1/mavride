@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div>
+    <div className="pl-[30px] pr-[30px]">
       <div className="text-[32px] font-bold lg:text-[64px] text-center text-midnightblue-200">
         Contact Us
       </div>
