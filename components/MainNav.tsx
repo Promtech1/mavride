@@ -20,7 +20,7 @@ const MainNav = () => {
     }
 
   return (
-    <div className="main-nav-container pl-[30px] pr-[30px]">
+    <div className="main-nav-container pl-[30px] pr-[30px] pt-[20px]">
         <div className="main-nav-wrapper">
             <div className="nav-left">
                 <img src="/logo.png" className="mr-2 w-[130px]" alt="" />

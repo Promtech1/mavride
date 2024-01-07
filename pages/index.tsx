@@ -15,7 +15,7 @@ import Vetted from "../components/Vetted";
 export default function Index() {
     return (
         <main>
-            <div className="p-[15px] md:p-[30px] lg:p-[30px] ">
+            <div className="">
                 {/* <Navbar />
     <Services /> */}
                 {/* <NavBar /> */}

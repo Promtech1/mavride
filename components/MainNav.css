@@ -101,3 +101,8 @@
     }
 }
 
+@media screen and (max-width: 746px){
+    .nav-mobile{
+        width: 80%;
+    }
+}
