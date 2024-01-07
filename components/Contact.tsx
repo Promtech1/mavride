@@ -37,9 +37,9 @@ export default function Contact() {
           method="post"
           action="mailto:info@mavride.net?subject=subject&message=message"
         >
-          <button className="block bg-mediumblue-100 mx-auto text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded ">
-            Mail us
-          </button>
+          <Link href={"/Contact"} ><button className="block bg-mediumblue-100 mx-auto text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded ">
+            Contact us
+          </button></Link>
         </form>
       </div>
     </div>

@@ -32,7 +32,7 @@ const MainNav = () => {
                     </Link></li>
                     <li><Link href={"/#About"} >About</Link></li>
                     <li><Link href={"/#Services"} >Service</Link></li>
-                    <li><Link href={"/#Mail"} >Contact</Link></li>
+                    <li><Link href={"/Contact"} >Contact</Link></li>
                     <li className="get-started">Get Started</li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@ const MainNav = () => {
                     </Link></li>
                     <li><Link href={"/#About"} >About</Link></li>
                     <li><Link href={"/#Services"} >Service</Link></li>
-                    <li><Link href={"/#Mail"} >Contact</Link></li>
+                    <li><Link href={"/Contact"} >Contact</Link></li>
                     <li className="get-started-mobile">Get Started</li>
                 </ul>
             </div>

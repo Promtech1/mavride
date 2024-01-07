@@ -5,7 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+
+.main-nav-container{
+    z-index: 1;
 }
 
 .get-started{

@@ -7,8 +7,7 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const {
-      firstName,
-      lastName,
+      fullName,
       message,
       email,
       phone
@@ -32,8 +31,7 @@ export default async function handler(
       to: "testing@mavride.net",
       subject: "Mailus",
       text: `
-        First Name: ${firstName}
-        \nLast Name: ${lastName}
+        Full Name: ${fullName}
         \nPhone Number: ${phone}
          \nEmail: ${email}
          \nMessage: ${message}
