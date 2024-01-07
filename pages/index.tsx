@@ -18,8 +18,8 @@ export default function Index() {
             <div className="p-[15px] md:p-[30px] lg:p-[30px] ">
                 {/* <Navbar />
     <Services /> */}
-                <NavBar />
-                {/* <MainNav/> */}
+                {/* <NavBar /> */}
+                <MainNav/>
                 <BTWP />
                 <Hero />
                 <BTWP />

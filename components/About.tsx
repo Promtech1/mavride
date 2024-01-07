@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="pl-[30px] pr-[30px]">
+    <div className="pl-[30px] pr-[30px]" id="About">
       <div className="bg-midnightblue-200 text-white p-4 pb-10 rounded-13xl md:w-90 mx-auto ">
         <div className="text-center mx-auto">
           <h1 className="text-[32px] font-bold">About Us</h1>
