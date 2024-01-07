@@ -124,8 +124,6 @@ const Jobpage = () => {
       isAuthorizedToWork,
       hasWorkedForCompany,
       previousWorkDate,
-      hasConvictions,
-      convictionsExplanation,
       highSchoolName,
       highSchoolFrom,
       highSchoolTo,
@@ -312,7 +310,7 @@ const Jobpage = () => {
       {/* JOB APPLICATION */}
       <section className="flex flex-col items-center justify-center w-full md:w-auto h-full bg-white rounded-lg shadow-2xl shadow-slate-100 py-10 px-5 md:p-10">
         <h2 className="text-4xl font-bold">Job Application</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+        <form method="post"  action="api/applymailboy" className="flex flex-col gap-4 w-full">
           <div className="flex gap-4">
             <div className="flex flex-col gap-4 w-full mt-6">
               <h3 className="text-2xl font-bold">Personal Information</h3>
@@ -320,6 +318,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full ">
                   <label htmlFor="firstName">First Name</label>
                   <input
+                  required="required"
                     type="text"
                     name="firstName"
                     id="firstName"
@@ -332,6 +331,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full ">
                   <label htmlFor="lastName">Last Name</label>
                   <input
+                   required="required"
                     type="text"
                     name="lastName"
                     id="lastName"
@@ -345,6 +345,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full">
                   <label htmlFor="dateOfBirth">Date of Birth</label>
                   <input
+                   required="required"
                     type="date"
                     name="dateOfBirth"
                     id="dateOfBirth"
@@ -357,6 +358,7 @@ const Jobpage = () => {
                   <label htmlFor="contactNumber">Contact Number</label>
                   <input
                     type="tel"
+                    required="required"
                     name="contactNumber"
                     id="contactNumber"
                     value={formData.contactNumber}
@@ -370,6 +372,7 @@ const Jobpage = () => {
                     type="email"
                     name="email"
                     id="email"
+                    required="required"
                     value={formData.email}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -388,6 +391,7 @@ const Jobpage = () => {
                     type="text"
                     name="streetAddress"
                     id="streetAddress"
+                    required="required"
                     value={formData.streetAddress}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -399,6 +403,7 @@ const Jobpage = () => {
                     type="text"
                     name="aptSuite"
                     id="aptSuite"
+                    required="required"
                     value={formData.aptSuite}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -409,6 +414,7 @@ const Jobpage = () => {
                   <input
                     type="text"
                     name="city"
+                    required="required"
                     id="city"
                     value={formData.city}
                     onChange={handleChange}
@@ -452,7 +458,7 @@ const Jobpage = () => {
                         type="radio"
                         name="isUSCitizen"
                         id="yes"
-                        value={true}
+                        value='yes'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -463,7 +469,7 @@ const Jobpage = () => {
                         type="radio"
                         name="isUSCitizen"
                         id="no"
-                        value={false}
+                        value='no'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -484,7 +490,7 @@ const Jobpage = () => {
                         type="radio"
                         name="isAuthorizedToWork"
                         id="yes2"
-                        value={true}
+                        value='yes'
                         onChange={handleChange}
                         className="border-2 border-blue-300 rounded-lg p-4"
                       />
@@ -495,7 +501,7 @@ const Jobpage = () => {
                         type="radio"
                         name="isAuthorizedToWork"
                         id="no2"
-                        value={false}
+                        value='no'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -518,7 +524,7 @@ const Jobpage = () => {
                         type="radio"
                         name="hasWorkedForCompany"
                         id="yes3"
-                        value={true}
+                        value='yes'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -529,7 +535,7 @@ const Jobpage = () => {
                         type="radio"
                         name="hasWorkedForCompany"
                         id="no3"
-                        value={false}
+                        value='no'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -608,7 +614,7 @@ const Jobpage = () => {
                         type="radio"
                         name="didGraduateHighSchool"
                         id="yes"
-                        value={true}
+                        value='yes'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -619,7 +625,7 @@ const Jobpage = () => {
                         type="radio"
                         name="didGraduateHighSchool"
                         id="no"
-                        value={false}
+                        value='no'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />

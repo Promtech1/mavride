@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import axios from 'axios';
 
 const Quote = () => {
   const [formData, setFormData] = useState({
@@ -7,23 +8,23 @@ const Quote = () => {
     lastName: "",
     contactNumber: "",
     email: "",
-    pickup: {
+     
       streetAddress: "",
       aptSuite: "",
       city: "",
       state: "",
       zip: "",
-    },
-    dropoff: {
-      streetAddress: "",
-      aptSuite: "",
-      city: "",
-      state: "",
-      zip: "",
-    },
+  
+    
+      streetAddress2: "",
+      aptSuite2: "",
+      city2: "",
+      state2: "",
+      zip2: "",
+   
     appointmentDate: "",
     appointmentTime: "",
-    oneWayRoundTrip: "",
+    tripType: "",
     modeOfTransportation: "",
     otherSpecificInfo: "",
   });
@@ -99,18 +100,44 @@ const Quote = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (validateForm()) {
+      try {
+        // Assuming 'your-api-endpoint' is the URL where you want to send the data
+        const response = await axios.post('http://localhost:3000/api/sendmailboy', formData);
+  
+        // Handle the response as needed, e.g., check response status, log data, etc.
+        console.log('Server response:', response.data);
+  
+        window.alert("Good Job");
+      } catch (error) {
+        // Handle any errors that occurred during the axios request
+        console.error('Error sending data:', error);
+        setErrmsg("An error occurred while submitting the form.");
+      }
+    } else {
+      setErrmsg("Please fill out all required fields");
+    }
+  };
+
+
+  /*const handleSubmit = (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      setErrmsg("");
+      //setErrmsg("");
+      window.alert("Good Job");
       console.log(formData);
     }
     else {
       setErrmsg("Please fill out all required fields");
     }
 
-  };
+  };**/
 
   return (
     <main className="flex flex-col gap-4 w-full md:w-auto min-h-screen py-4 px-4 bg-white text-gray-700">
@@ -121,7 +148,9 @@ const Quote = () => {
         </p>
       </section>
       <section className="mt-10">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form method="post" action="api/sendmailboy" className="flex flex-col" onS2ubmit={handleSubmit}>
+          
+          
           <h3 className="font-bold text-2xl mb-4">Personal Information</h3>
           <div className="flex md:flex-nowrap flex-wrap gap-4">
             <div className="flex flex-col gap-4 w-full ">
@@ -190,8 +219,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="streetAddress"
-                name="pickup.streetAddress"
-                value={formData.pickup.streetAddress}
+                name="streetAddress"
+                value={formData.streetAddress}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -204,8 +233,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="aptSuite"
-                name="pickup.aptSuite"
-                value={formData.pickup.aptSuite}
+                name="aptSuite"
+                value={formData.aptSuite}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -220,8 +249,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="city"
-                name="pickup.city"
-                value={formData.pickup.city}
+                name="city"
+                value={formData.city}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -234,8 +263,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="state"
-                name="pickup.state"
-                value={formData.pickup.state}
+                name="state"
+                value={formData.state}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -248,8 +277,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="zip"
-                name="pickup.zip"
-                value={formData.pickup.zip}
+                name="zip"
+                value={formData.zip}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -265,8 +294,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="streetAddress"
-                name="dropoff.streetAddress"
-                value={formData.dropoff.streetAddress}
+                name="streetAddress2"
+                value={formData.streetAddress2}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -279,8 +308,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="aptSuite"
-                name="dropoff.aptSuite"
-                value={formData.dropoff.aptSuite}
+                name="aptSuite2"
+                value={formData.aptSuite2}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -295,8 +324,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="city"
-                name="dropoff.city"
-                value={formData.dropoff.city}
+                name="city2"
+                value={formData.city2}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -309,8 +338,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="state"
-                name="dropoff.state"
-                value={formData.dropoff.state}
+                name="state2"
+                value={formData.state2}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -323,8 +352,8 @@ const Quote = () => {
               <input
                 type="text"
                 id="zip"
-                name="dropoff.zip"
-                value={formData.dropoff.zip}
+                name="zip2"
+                value={formData.zip2}
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
