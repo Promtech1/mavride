@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="pl-[30px] pr-[30px]">
+    <div className="pl-[30px] pr-[30px] ">
       <div className="">
         <h1 className="text-midnightblue-100 lg:text-[64px] lg:text-center m-0">
           Your Journey To Wellness
@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
       <img className="mt-4 md:hidden w-full" alt="" src="/rectangle-4@2x.png" />
       <img className="mt-4 w-full hidden md:inline" alt="" src="/rectangle_full.png" />
-      <Link href={"/quoteForm"}>
+      <Link href={"/BookaRide"}>
           <button className="bg-mediumblue-100 text-white text-center p-4 px-16 my-5 text-[16px] w-fit rounded cursor-pointer ">
            Book a Ride
           </button>
