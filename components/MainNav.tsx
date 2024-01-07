@@ -30,9 +30,9 @@ const MainNav = () => {
                     <li><Link href={"/"} className="active:text-blue-700">
                         Home
                     </Link></li>
-                    <Link href={"/#About"} ><li>About</li></Link>
-                    <li>Service</li>
-                    <li>Contact</li>
+                    <li><Link href={"/#About"} >About</Link></li>
+                    <li><Link href={"/#Services"} >Service</Link></li>
+                    <li><Link href={"/#Mail"} >Contact</Link></li>
                     <li className="get-started">Get Started</li>
                 </ul>
             </div>
@@ -49,9 +49,9 @@ const MainNav = () => {
                     <li><Link href={"/"} className="active:white">
                         Home
                     </Link></li>
-                    <Link href={"/#About"} ><li>About</li></Link>
-                    <li>Service</li>
-                    <li>Contact</li>
+                    <li><Link href={"/#About"} >About</Link></li>
+                    <li><Link href={"/#Services"} >Service</Link></li>
+                    <li><Link href={"/#Mail"} >Contact</Link></li>
                     <li className="get-started-mobile">Get Started</li>
                 </ul>
             </div>

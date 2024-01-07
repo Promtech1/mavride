@@ -33,6 +33,7 @@
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
     text-decoration: none !important;
+    color: black;
 }
 
 .get-started-mobile{

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className="flex flex-col justify-between sm:flex-row gap-10 pl-[30px] pr-[30px]">
+    <div className="flex flex-col justify-between md:flex-row gap-10 pl-[30px] pr-[30px]" id="Services">
       <div className="">
         <h3 className="capitalize m-0 text-[32px] text-midnightblue-200 mb-5 lg:text-[64px]">
           Our Services

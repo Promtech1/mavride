@@ -23,7 +23,7 @@ const Trained = () => {
       </div>
 
       <div className="mt-5 sm:mt-0">
-        <img className="w-full sm:min-w-[400px]" alt="" src="/trained.png" />
+        <img className="w-full sm:min-w-[50%]" alt="" src="/trained.png" />
       </div>
     </div>
   );
