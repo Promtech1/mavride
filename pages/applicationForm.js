@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from 'next/router'
 const jobDescription = [
   {
     id: 1,
@@ -254,7 +255,12 @@ const Jobpage = () => {
     }
     console.log(formData);
   };
+  const router = useRouter();
+  const { id } = router.query;
 
+  // Define your success and error conditions
+  const isSuccess = id === '200';
+  const isError = id === '500';
   const date = new Date();
   const year = date.getFullYear();
 
@@ -265,6 +271,7 @@ const Jobpage = () => {
         <h1 className="text-6xl md:text-7xl font-bold text-center capitalize">
           Drive with us
         </h1>
+        
         <p className="text-center w-full md:w-4/5">
           Mavride is a non-emergency medical transportation company that
           provides transportation services to the elderly and disabled. We are
@@ -272,10 +279,24 @@ const Jobpage = () => {
           our team, please fill out the form below.
         </p>
       </section>
+      {isSuccess && (
+        <div className="bg-green-500 text-white p-4">
+          Your application has been successfully submitted
+        </div>
+      )}
+
+      {isError && (
+        <div className="bg-red-500 text-white p-4">
+          Error! there was error submiting your form. please try again latter
+        </div>
+      )}
 
       {/* JOB DESCRIPTION */}
       <section className="flex flex-col items-center justify-center w-full md:w-auto h-full bg-white rounded-lg shadow-2xl shadow-slate-100 py-10 px-5 md:p-10">
         <div className="flex flex-col md:flex-row gap-8 items-center">
+       
+
+       
           <div className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold">Job Description</h2>
             <ul className="list-disc">

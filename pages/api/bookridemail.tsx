@@ -38,7 +38,7 @@ export default async function handler(
     const mailOptions = {
       from: "mavride@nuviflix.com.ng",
       to: "testing@mavride.net",
-      subject: "Quote Request",
+      subject: "I want to book a ride",
       text: `
         First Name: ${firstName}
         \nLast Name: ${lastName}
@@ -57,8 +57,8 @@ export default async function handler(
         \nDropoff City: ${city2}
       `,
     };
-    const successRedirectUrl = "/quoteForm?id=200";  // Replace with your success redirect URL
-    const failureRedirectUrl = "/quoteForm?id=500";    // Replace with your error redirect URL
+    const successRedirectUrl = "/BookaRide?id=200";  // Replace with your success redirect URL
+    const failureRedirectUrl = "/BookaRide?id=500";    // Replace with your error redirect URL
     
     try {
       await transporter.sendMail(mailOptions);

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from 'axios';
+import { useRouter } from 'next/router'
 
 const Quote = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +55,14 @@ const Quote = () => {
       }));
     }
   };
+
+  const router = useRouter();
+  const { id } = router.query;
+
+  // Define your success and error conditions
+  const isSuccess = id === '200';
+  const isError = id === '500';
+
 
   const validateForm = () => {
     const newErrors = {};
@@ -147,6 +156,20 @@ const Quote = () => {
           Fill out the form below to get a quote for your trip.
         </p>
       </section>
+
+      {isSuccess && (
+        <div className="bg-green-500 text-white p-4">
+          Success! your bookings have successfully be submitted
+        </div>
+      )}
+
+      {isError && (
+        <div className="bg-red-500 text-white p-4">
+          Error! there was error submitting your bookings
+        </div>
+      )}
+
+      
       <section className="mt-10">
         <form method="post" action="api/sendmailboy" className="flex flex-col" onS2ubmit={handleSubmit}>
           
