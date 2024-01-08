@@ -6,7 +6,7 @@ const jobDescription = [
     id: 1,
     point:
       "Transporting patients and clients utilizing their own/company vehicles safely and professionally.",
-  },
+  }, 
   {
     id: 2,
     point:

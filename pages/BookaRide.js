@@ -108,7 +108,7 @@ const Quote = () => {
     if (validateForm()) {
       try {
         // Assuming 'your-api-endpoint' is the URL where you want to send the data
-        const response = await axios.post('http://localhost:3000/api/sendmailboy', formData);
+        const response = await axios.post('api/sendmailboy', formData);
   
         // Handle the response as needed, e.g., check response status, log data, etc.
         console.log('Server response:', response.data);
