@@ -71,8 +71,8 @@ export default async function handler(
 
              `,
     };
-const successRedirectUrl = "applicationForm?id=200";  // Replace with your success redirect URL
-const failureRedirectUrl = "applicationForm?id=500";    // Replace with your error redirect URL
+const successRedirectUrl = "/applicationForm?id=200";  // Replace with your success redirect URL
+const failureRedirectUrl = "/applicationForm?id=500";    // Replace with your error redirect URL
 
 
     try {
