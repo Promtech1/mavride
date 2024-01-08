@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
 import Link from "next/link";
-
+import { gsap} from 'gsap';
 
 const MainNav = () => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
     const toggleHamburger = () => {
-        setIsHamburgerOpen(!isHamburgerOpen);
+        gsap.to('.ham', {
+            opacity: 0,
+            duration: 0.5,
+            onComplete: () => {
+                setIsHamburgerOpen(!isHamburgerOpen);
 
-        const navList = document.querySelector('.nav-mobile');
-        if (navList) {
-            if (isHamburgerOpen) {
-                navList.classList.remove('nav-list-open');
-            } else {
-                navList.classList.add('nav-list-open');
+                const navList = document.querySelector('.nav-mobile');
+                if (navList) {
+                    if (isHamburgerOpen) {
+                        navList.classList.remove('nav-list-open');
+                    } else {
+                        navList.classList.add('nav-list-open');
+                    }
+                }
+
+                gsap.to('.ham', {
+                    opacity: 1,
+                    duration: 0.5,
+                });
             }
-        }
+
+            
+            
+        })
+        
+
+        
 
     }
 
@@ -40,7 +57,7 @@ const MainNav = () => {
                 {isHamburgerOpen ? (
                 <img src="/work-x.png" alt="close icon" className="close-icon ham cursor-pointer" onClick={toggleHamburger} />
                 ) : (
-                    <img src="/hamburger-black.png" alt="logo" className=" nav-opacity hamburger ham cursor-pointer" onClick={toggleHamburger} />
+                    <img src="/hamburger-black.png" alt="logo" className="w-10 nav-opacity hamburger ham cursor-pointer" onClick={toggleHamburger} />
                 )}
             </div>
         </div>

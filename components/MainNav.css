@@ -50,6 +50,7 @@
     display: none;
 }
 
+
 .nav-mobile.nav-list-open{
     transform: translateX(0%);
     opacity: 1;
