@@ -24,16 +24,8 @@ const Contact = () => {
     <div className="contact-container">
       <MainNav />
       <div className="contact-wrapper">
-        <h1 data-aos="fade-up" data-aos-duration="1000">
-          Contact us!
-        </h1>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="1000"
-        >
-           {isSuccess && (
-        <div className="bg-green-500 text-white p-4">
+      {isSuccess && (
+        <div  className="bg-green-500 text-white p-4">
           Your message has succesfully be submitted
         </div>
       )}
@@ -44,6 +36,15 @@ const Contact = () => {
         </div>
       )}
 
+        <h1 data-aos="fade-up" data-aos-duration="1000">
+          Contact us!
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+         
        
 
           Just fill this form and we will contact you promptly, Drop us a

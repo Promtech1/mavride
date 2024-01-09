@@ -35,7 +35,7 @@ export default async function handler(
          \nMessage: ${message}
             `,
     };
-const successRedirectUrl = "/Contact?id=200";  // Replace with your success redirect URL
+const successRedirectUrl = "/successPage";  // Replace with your success redirect URL
 const failureRedirectUrl = "/Contact?id=500";    // Replace with your error redirect URL
 
 
