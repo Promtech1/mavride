@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .success-container h1, p{
@@ -18,6 +18,12 @@
     gap: 2em;
     text-align: center;
     padding: 0 2em;
+}
+
+.success-wrapper a{
+    color: #020e72;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .success-wrapper .check{
