@@ -1,6 +1,7 @@
 import React from 'react'
 
 const successPage = () => {
+  
   return (
     <div className="success-container">
         <div className="success-wrapper">

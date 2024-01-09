@@ -57,7 +57,7 @@ export default async function handler(
         \nDropoff City: ${city2}
       `,
     };
-    const successRedirectUrl = "/quoteForm?id=200";  // Replace with your success redirect URL
+    const successRedirectUrl = "/successPage";  // Replace with your success redirect URL
     const failureRedirectUrl = "/quoteForm?id=500";    // Replace with your error redirect URL
     
     try {
