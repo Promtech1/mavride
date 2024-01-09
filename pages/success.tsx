@@ -1,6 +1,6 @@
 import React from 'react'
 
-const successPage = () => {
+const success = () => {
   
   return (
     <div className="success-container">
@@ -17,4 +17,4 @@ const successPage = () => {
   )
 }
 
-export default successPage
+export default success

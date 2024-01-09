@@ -57,7 +57,7 @@ export default async function handler(
         \nDropoff City: ${city2}
       `,
     };
-    const successRedirectUrl = "/successPage";  // Replace with your success redirect URL
+    const successRedirectUrl = "/success";  // Replace with your success redirect URL
     const failureRedirectUrl = "/BookaRide?id=500";    // Replace with your error redirect URL
     
     try {

@@ -16,6 +16,8 @@
     align-items: center;
     justify-content: center;
     gap: 2em;
+    text-align: center;
+    padding: 0 2em;
 }
 
 .success-wrapper .check{
