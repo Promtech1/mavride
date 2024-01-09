@@ -4,6 +4,7 @@ import "../public/globals.css";
 import './Training.css'
 import '../components/MainNav.css'
 import './Contact.css'
+import './successPage.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     return (
