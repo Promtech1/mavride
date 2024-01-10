@@ -339,7 +339,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full ">
                   <label htmlFor="firstName">First Name</label>
                   <input
-                  required="required"
+                  required
                     type="text"
                     name="firstName"
                     id="firstName"
@@ -352,7 +352,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full ">
                   <label htmlFor="lastName">Last Name</label>
                   <input
-                   required="required"
+                   required
                     type="text"
                     name="lastName"
                     id="lastName"
@@ -366,7 +366,7 @@ const Jobpage = () => {
                 <div className="flex flex-col gap-4 w-full">
                   <label htmlFor="dateOfBirth">Date of Birth</label>
                   <input
-                   required="required"
+                   required
                     type="date"
                     name="dateOfBirth"
                     id="dateOfBirth"
@@ -379,7 +379,7 @@ const Jobpage = () => {
                   <label htmlFor="contactNumber">Contact Number</label>
                   <input
                     type="tel"
-                    required="required"
+                    required
                     name="contactNumber"
                     id="contactNumber"
                     value={formData.contactNumber}
@@ -393,7 +393,7 @@ const Jobpage = () => {
                     type="email"
                     name="email"
                     id="email"
-                    required="required"
+                    required
                     value={formData.email}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -412,7 +412,7 @@ const Jobpage = () => {
                     type="text"
                     name="streetAddress"
                     id="streetAddress"
-                    required="required"
+                    required
                     value={formData.streetAddress}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -424,7 +424,7 @@ const Jobpage = () => {
                     type="text"
                     name="aptSuite"
                     id="aptSuite"
-                    required="required"
+                    required
                     value={formData.aptSuite}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -435,7 +435,7 @@ const Jobpage = () => {
                   <input
                     type="text"
                     name="city"
-                    required="required"
+                    required
                     id="city"
                     value={formData.city}
                     onChange={handleChange}
@@ -449,6 +449,7 @@ const Jobpage = () => {
                   <input
                     type="text"
                     name="state"
+                    required
                     id="state"
                     value={formData.state}
                     onChange={handleChange}
@@ -460,6 +461,7 @@ const Jobpage = () => {
                   <input
                     type="text"
                     name="zip"
+                    required
                     id="zip"
                     value={formData.zip}
                     onChange={handleChange}
@@ -477,6 +479,7 @@ const Jobpage = () => {
                       <label htmlFor="yes">Yes</label>
                       <input
                         type="radio"
+                        required
                         name="isUSCitizen"
                         id="yes"
                         value='yes'
@@ -488,6 +491,7 @@ const Jobpage = () => {
                       <label htmlFor="no">No</label>
                       <input
                         type="radio"
+                        required
                         name="isUSCitizen"
                         id="no"
                         value='no'
@@ -512,6 +516,7 @@ const Jobpage = () => {
                         name="isAuthorizedToWork"
                         id="yes2"
                         value='yes'
+                        required
                         onChange={handleChange}
                         className="border-2 border-blue-300 rounded-lg p-4"
                       />
@@ -523,6 +528,7 @@ const Jobpage = () => {
                         name="isAuthorizedToWork"
                         id="no2"
                         value='no'
+                        required
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -545,6 +551,7 @@ const Jobpage = () => {
                         type="radio"
                         name="hasWorkedForCompany"
                         id="yes3"
+                        required
                         value='yes'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
@@ -557,6 +564,7 @@ const Jobpage = () => {
                         name="hasWorkedForCompany"
                         id="no3"
                         value='no'
+                        required
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
                       />
@@ -591,6 +599,7 @@ const Jobpage = () => {
                   <input
                     type="text"
                     name="highSchoolName"
+                    required
                     id="highSchoolName"
                     value={formData.highSchoolName}
                     onChange={handleChange}
@@ -604,6 +613,7 @@ const Jobpage = () => {
                     name="highSchoolFrom"
                     id="highSchoolFrom"
                     value={formData.highSchoolFrom}
+                    required
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
                   />
@@ -616,6 +626,7 @@ const Jobpage = () => {
                     id="highSchoolTo"
                     value={formData.highSchoolTo}
                     onChange={handleChange}
+                    required
                     className="border-2 border-gray-300 rounded-lg p-2"
                   />
                 </div>
@@ -633,6 +644,7 @@ const Jobpage = () => {
                       <label htmlFor="yes">Yes</label>
                       <input
                         type="radio"
+                        required
                         name="didGraduateHighSchool"
                         id="yes"
                         value='yes'
@@ -646,6 +658,7 @@ const Jobpage = () => {
                         type="radio"
                         name="didGraduateHighSchool"
                         id="no"
+                        required
                         value='no'
                         onChange={handleChange}
                         className="border-2 border-gray-300 rounded-lg p-2"
@@ -663,6 +676,7 @@ const Jobpage = () => {
                     type="text"
                     name="collegeName"
                     id="collegeName"
+                    required
                     value={formData.collegeName}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -676,6 +690,7 @@ const Jobpage = () => {
                     type="text"
                     name="otherEducation"
                     id="otherEducation"
+                    required
                     value={formData.otherEducation}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -706,6 +721,7 @@ const Jobpage = () => {
                       <input
                         type="radio"
                         name="signature"
+                        required
                         id="yes4"
                         value={true}
                         onChange={handleChange}
