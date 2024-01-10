@@ -498,7 +498,7 @@ const Quote = () => {
               id="otherSpecificInfo"
               name="otherSpecificInfo"
               value={formData.otherSpecificInfo}
-              required="required"
+              required
               onChange={handleChange}
               placeholder=""
               className="border-2 border-gray-300 rounded-lg p-2"
