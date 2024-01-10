@@ -278,6 +278,7 @@ const Quote = () => {
               <input
                 type="text"
                 id="city"
+                required
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
