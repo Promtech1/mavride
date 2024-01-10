@@ -151,10 +151,10 @@ function JoinUs() {
               <label className="block mb-2 font-semibold">Are you legally authorized to work in the United States?</label>
               <div className="grid grid-cols-2 gap-4">
                 <label>
-                  <input type="radio" name="authorized" className="mr-2" /> Yes
+                  <input type="radio" required name="authorized" className="mr-2" /> Yes
                 </label>
                 <label>
-                  <input type="radio" name="authorized" className="mr-2" /> No
+                  <input type="radio" required name="authorized" className="mr-2" /> No
                 </label>
               </div>
             </div>
@@ -163,10 +163,10 @@ function JoinUs() {
               <label className="block mb-2 font-semibold">Do you require Visa Sponsorship?</label>
               <div className="grid grid-cols-2 gap-4">
                 <label>
-                  <input type="radio" name="visaSponsorship" className="mr-2" /> Yes
+                  <input type="radio" required name="visaSponsorship" className="mr-2" /> Yes
                 </label>
                 <label>
-                  <input type="radio" name="visaSponsorship" className="mr-2" /> No
+                  <input type="radio" required name="visaSponsorship" className="mr-2" /> No
                 </label>
               </div>
               <div>
@@ -179,10 +179,10 @@ function JoinUs() {
               <label className="block mb-2 font-semibold">Have you ever been convicted of a misdemeanor or felony?</label>
               <div className="grid grid-cols-2 gap-4">
                 <label>
-                  <input type="radio" name="convicted" className="mr-2 font-medium" /> Yes
+                  <input type="radio" required name="convicted" className="mr-2 font-medium" /> Yes
                 </label>
                 <label>
-                  <input type="radio" name="convicted" className="mr-2 font-medium" /> No
+                  <input type="radio" required name="convicted" className="mr-2 font-medium" /> No
                 </label>
               </div>
               <div className="font-semibold">
@@ -195,10 +195,10 @@ function JoinUs() {
               <label className="block mb-2 font-semibold">Have you ever worked for this employer?</label>
               <div className="grid grid-cols-2 gap-4">
                 <label>
-                  <input type="radio" name="workedForEmployer" className="mr-2" /> Yes
+                  <input type="radio" required name="workedForEmployer" className="mr-2" /> Yes
                 </label>
                 <label>
-                  <input type="radio" name="workedForEmployer" className="mr-2" /> No
+                  <input type="radio" required name="workedForEmployer" className="mr-2" /> No
                 </label>
               </div>
               <div>

@@ -59,10 +59,10 @@ const Contact = () => {
           data-aos-delay="500"
           data-aos-duration="1000"
         >
-          <input type="text" name="fullName" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <input type="tel" name="phone" placeholder="Your Phone" />
-          <input type="text" name="message" placeholder="Message" />
+          <input required type="text" name="fullName" placeholder="Your Name" />
+          <input required type="email" name="email" placeholder="Your Email" />
+          <input required type="tel" name="phone" placeholder="Your Phone" />
+          <input required type="text" name="message" placeholder="Message" />
           <button type="submit" className="icon-button">
             Submit
             <img src="/next-arrow.png" alt="" />
