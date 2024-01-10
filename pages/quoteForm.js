@@ -182,6 +182,7 @@ const Quote = () => {
                 type="text"
                 name="firstName"
                 id="firstName"
+                required="required"
                 value={formData.firstName}
                 onChange={handleChange}
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -195,6 +196,7 @@ const Quote = () => {
                 type="text"
                 id="lastName"
                 name="lastName"
+                required="required"
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder=""
@@ -211,6 +213,7 @@ const Quote = () => {
                 type="tel"
                 id="contactNumber"
                 name="contactNumber"
+                required="required"
                 value={formData.contactNumber}
                 onChange={handleChange}
                 placeholder=""
@@ -226,6 +229,7 @@ const Quote = () => {
                 type="text"
                 id="email"
                 name="email"
+                required="required"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder=""
@@ -243,6 +247,7 @@ const Quote = () => {
                 type="text"
                 id="streetAddress"
                 name="streetAddress"
+                required="required"
                 value={formData.streetAddress}
                 onChange={handleChange}
                 placeholder=""
@@ -258,6 +263,7 @@ const Quote = () => {
                 id="aptSuite"
                 name="aptSuite"
                 value={formData.aptSuite}
+                required="required"
                 onChange={handleChange}
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -273,6 +279,7 @@ const Quote = () => {
                 type="text"
                 id="city"
                 name="city"
+                required="required"
                 value={formData.city}
                 onChange={handleChange}
                 placeholder=""
@@ -301,6 +308,7 @@ const Quote = () => {
                 type="text"
                 id="zip"
                 name="zip"
+                required="required"
                 value={formData.zip}
                 onChange={handleChange}
                 placeholder=""
@@ -318,6 +326,7 @@ const Quote = () => {
                 type="text"
                 id="streetAddress"
                 name="streetAddress2"
+                required="required"
                 value={formData.streetAddress2}
                 onChange={handleChange}
                 placeholder=""
@@ -331,6 +340,7 @@ const Quote = () => {
               <input
                 type="text"
                 id="aptSuite"
+                required="required"
                 name="aptSuite2"
                 value={formData.aptSuite2}
                 onChange={handleChange}
@@ -347,6 +357,7 @@ const Quote = () => {
               <input
                 type="text"
                 id="city"
+                required="required"
                 name="city2"
                 value={formData.city2}
                 onChange={handleChange}
@@ -365,6 +376,7 @@ const Quote = () => {
                 value={formData.state2}
                 onChange={handleChange}
                 placeholder=""
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -378,6 +390,7 @@ const Quote = () => {
                 name="zip2"
                 value={formData.zip2}
                 onChange={handleChange}
+                required="required"
                 placeholder=""
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
@@ -395,6 +408,7 @@ const Quote = () => {
                 name="appointmentDate"
                 value={formData.appointmentDate}
                 onChange={handleChange}
+                required="required"
                 placeholder="MM/DD/YYYY"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
@@ -408,6 +422,7 @@ const Quote = () => {
                 id="appointmentTime"
                 name="appointmentTime"
                 value={formData.appointmentTime}
+                required="required"
                 onChange={handleChange}
                 placeholder="00:00 AM/PM"
                 className="border-2 border-gray-300 rounded-lg p-2"
@@ -426,6 +441,7 @@ const Quote = () => {
                 id="oneWay"
                 name="tripType"
                 value="One Way"
+                required="required"
                 checked={formData.tripType === 'One Way'}
                 onChange={handleChange}
                 className="mr-2"
@@ -441,6 +457,7 @@ const Quote = () => {
                 type="radio"
                 id="roundTrip"
                 name="tripType"
+                required="required"
                 value="Round Trip"
                 checked={formData.tripType === 'Round Trip'}
                 onChange={handleChange}
@@ -457,6 +474,7 @@ const Quote = () => {
                 name="modeOfTransportation"
                 id="modeOfTransportation"
                 value={formData.modeOfTransportation}
+                required="required"
                 onChange={handleChange}
                 className="border-2 border-gray-300 rounded-lg p-2"
               >
@@ -480,6 +498,7 @@ const Quote = () => {
               id="otherSpecificInfo"
               name="otherSpecificInfo"
               value={formData.otherSpecificInfo}
+              required="required"
               onChange={handleChange}
               placeholder=""
               className="border-2 border-gray-300 rounded-lg p-2"

@@ -180,6 +180,7 @@ const Quote = () => {
               <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
+                required="required"
                 name="firstName"
                 id="firstName"
                 value={formData.firstName}
@@ -194,6 +195,7 @@ const Quote = () => {
               <input
                 type="text"
                 id="lastName"
+                required="required"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
@@ -210,6 +212,7 @@ const Quote = () => {
               <input
                 type="tel"
                 id="contactNumber"
+                required="required"
                 name="contactNumber"
                 value={formData.contactNumber}
                 onChange={handleChange}
@@ -226,6 +229,7 @@ const Quote = () => {
                 type="text"
                 id="email"
                 name="email"
+                required="required"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder=""
@@ -243,6 +247,7 @@ const Quote = () => {
                 type="text"
                 id="streetAddress"
                 name="streetAddress"
+                required="required"
                 value={formData.streetAddress}
                 onChange={handleChange}
                 placeholder=""
@@ -257,6 +262,7 @@ const Quote = () => {
                 type="text"
                 id="aptSuite"
                 name="aptSuite"
+                required="required"
                 value={formData.aptSuite}
                 onChange={handleChange}
                 placeholder=""
@@ -287,6 +293,7 @@ const Quote = () => {
                 type="text"
                 id="state"
                 name="state"
+                required="required"
                 value={formData.state}
                 onChange={handleChange}
                 placeholder=""
@@ -301,6 +308,7 @@ const Quote = () => {
                 type="text"
                 id="zip"
                 name="zip"
+                required="required"
                 value={formData.zip}
                 onChange={handleChange}
                 placeholder=""
@@ -321,6 +329,7 @@ const Quote = () => {
                 value={formData.streetAddress2}
                 onChange={handleChange}
                 placeholder=""
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -335,6 +344,7 @@ const Quote = () => {
                 value={formData.aptSuite2}
                 onChange={handleChange}
                 placeholder=""
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -348,6 +358,7 @@ const Quote = () => {
                 type="text"
                 id="city"
                 name="city2"
+                required="required"
                 value={formData.city2}
                 onChange={handleChange}
                 placeholder=""
@@ -362,6 +373,7 @@ const Quote = () => {
                 type="text"
                 id="state"
                 name="state2"
+                required="required"
                 value={formData.state2}
                 onChange={handleChange}
                 placeholder=""
@@ -379,6 +391,7 @@ const Quote = () => {
                 value={formData.zip2}
                 onChange={handleChange}
                 placeholder=""
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -396,6 +409,7 @@ const Quote = () => {
                 value={formData.appointmentDate}
                 onChange={handleChange}
                 placeholder="MM/DD/YYYY"
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -410,6 +424,7 @@ const Quote = () => {
                 value={formData.appointmentTime}
                 onChange={handleChange}
                 placeholder="00:00 AM/PM"
+                required="required"
                 className="border-2 border-gray-300 rounded-lg p-2"
               />
             </div>
@@ -425,6 +440,7 @@ const Quote = () => {
                 type="radio"
                 id="oneWay"
                 name="tripType"
+                required="required"
                 value="One Way"
                 checked={formData.tripType === 'One Way'}
                 onChange={handleChange}
@@ -442,6 +458,7 @@ const Quote = () => {
                 id="roundTrip"
                 name="tripType"
                 value="Round Trip"
+                required="required"
                 checked={formData.tripType === 'Round Trip'}
                 onChange={handleChange}
                 className="mr-2"
