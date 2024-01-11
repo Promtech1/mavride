@@ -26,18 +26,18 @@ export default async function handler(
 
     // Replace these values with your SMTP server details
     const transporter = nodemailer.createTransport({
-      host: "mail.nuviflix.com.ng",
+      host: "mail.privateemail.com",
       port: 465,
       secure: true,
       auth: {
-        user: "mavride@nuviflix.com.ng",
-        pass: "6Ew=.{)MrQB_",
+        user: "testing@mavride.net",
+        pass: "Loveisreal",
       },
     });
 
     const mailOptions = {
-      from: "mavride@nuviflix.com.ng",
-      to: "testing@mavride.net",
+      from: "testing@mavride.net",
+      to: "info@mavride.net",
       subject: "Quote Request",
       text: `
         First Name: ${firstName}

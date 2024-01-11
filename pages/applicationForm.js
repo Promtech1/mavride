@@ -676,7 +676,6 @@ const Jobpage = () => {
                     type="text"
                     name="collegeName"
                     id="collegeName"
-                    required
                     value={formData.collegeName}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
@@ -690,7 +689,6 @@ const Jobpage = () => {
                     type="text"
                     name="otherEducation"
                     id="otherEducation"
-                    required
                     value={formData.otherEducation}
                     onChange={handleChange}
                     className="border-2 border-gray-300 rounded-lg p-2"
