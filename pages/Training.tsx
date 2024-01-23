@@ -36,10 +36,10 @@ const Training = () => {
                   
                 </div>
                 <div className="text-[14px] mt-2 text-dimgray font-extralight mr-4">
-                  <span className="font-black text-base ">Drug, Alcohol, and Background Check:</span> It is of extreme importance
+                  <span className="font-bold text-base ">Drug, Alcohol, and Background Check:</span> It is of extreme importance
                   to us at Mavride to ensure the trustworthiness and professionalism
                   of our staff before employment and randomly while still employed
-                  with us. <span className="text-blue-600"><a className="no-underline" href="https://c-dat.net/" target="_blank" rel="noreferrer">c-dat.net{" "}</a></span>
+                  with us. <span className="text-blue-600"><a className="no-underline" href="https://www.questdiagnostics.com/" target="_blank" rel="noreferrer">c-dat.net{" "}</a></span>
                 </div>
                 </div>
               </div>
