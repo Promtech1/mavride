@@ -27,7 +27,7 @@ export default async function handler(
     const mailOptions = {
       from: "testing@mavride.net",
       to: "info@mavride.net",
-      subject: "Mailus",
+      subject: "Someone is trying to reach you",
       text: `
         Full Name: ${fullName}
         \nPhone Number: ${phone}
