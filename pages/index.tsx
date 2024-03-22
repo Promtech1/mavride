@@ -11,6 +11,7 @@ import Quote from "../components/Quote";
 import Services from "../components/Services";
 import Trained from "../components/Trained";
 import Vetted from "../components/Vetted";
+import PopModal from "@/components/PopModal";
 
 export default function Index() {
     return (
@@ -22,6 +23,10 @@ export default function Index() {
                 <MainNav/>
                 <BTWP />
                 <Hero />
+                <PopModal
+                    delay={3000}
+                    imageUrl="/banner.png"
+                />
                 <BTWP />
                 <About />
                 <BTWP />
