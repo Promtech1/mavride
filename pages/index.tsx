@@ -24,7 +24,7 @@ export default function Index() {
                 <BTWP />
                 <Hero />
                 <PopModal
-                    delay={3000}
+                    delay={2000}
                     imageUrl="/banner.png"
                 />
                 <BTWP />
