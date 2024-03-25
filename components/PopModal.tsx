@@ -72,7 +72,7 @@ const PopModal: React.FC<PopModalProps> = ({ delay, imageUrl }) => {
               <Image src={imageUrl} alt="Modal Image" width={300} height={300}/>
             </div>
             <p className="text-center">
-             Are you a qualified driver? We need at Mavride. Click below to join our team of drivers now!
+             Are you a qualified driver?  Click below to join our team of drivers now!
             </p>
             <div className="text-center">
               <Link className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 text-decoration-none" href="/applicationForm">
