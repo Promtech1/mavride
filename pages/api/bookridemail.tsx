@@ -26,18 +26,18 @@ export default async function handler(
 
     // Replace these values with your SMTP server details
     const transporter = nodemailer.createTransport({
-      host: "mail.nuviflix.com.ng",
+      host: "mail.privateemail.com",
       port: 465,
       secure: true,
       auth: {
-        user: "mavride@nuviflix.com.ng",
-        pass: "6Ew=.{)MrQB_",
+        user: "testing@mavride.net",
+        pass: "Loveisreal",
       },
     });
 
     const mailOptions = {
-      from: "mavride@nuviflix.com.ng",
-      to: "testing@mavride.net",
+      from: "testing@mavride.net",
+      to: "info@mavride.net",
       subject: "I want to book a ride",
       text: `
         First Name: ${firstName}
@@ -57,7 +57,7 @@ export default async function handler(
         \nDropoff City: ${city2}
       `,
     };
-    const successRedirectUrl = "/successPage";  // Replace with your success redirect URL
+    const successRedirectUrl = "/success";  // Replace with your success redirect URL
     const failureRedirectUrl = "/BookaRide?id=500";    // Replace with your error redirect URL
     
     try {

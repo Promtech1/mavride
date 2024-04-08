@@ -33,6 +33,24 @@ const PopModal: React.FC<PopModalProps> = ({ delay, imageUrl }) => {
                 onClick={closeModal}
                 className="absolute top-0 right-0 m-2 p-1 bg-gray-200 rounded-full text-gray-600 hover:bg-gray-300 focus:outline-none focus:bg-gray-300"
               >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-center">We are hiring</h2>
+            <div className="overflow-hidden rounded-lg mb-4 text-center">
+              <Image src={imageUrl} alt="Modal Image" width={300} height={300}/>
+            </div>
+            <p className="text-center">
+             Are you a qualified driver? Click below to join our team of drivers now!
+            </p>
+            <div className="text-center">
+              <Link className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 text-decoration-none" href="/applicationForm">
+               
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
