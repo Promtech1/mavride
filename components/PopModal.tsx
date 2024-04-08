@@ -76,9 +76,7 @@ const PopModal: React.FC<PopModalProps> = ({ delay, imageUrl }) => {
             </p>
             <div className="text-center">
               <Link className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 text-decoration-none" href="/applicationForm">
-               
                   Get Started
-                
               </Link>
             </div>
           </div>
