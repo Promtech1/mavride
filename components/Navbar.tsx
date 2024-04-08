@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="relative bg-white w-full h-[517.69rem] overflow-hidden text-left text-[2rem] text-midnightblue-200 font-space-grotesk">
+    <div className="relative bg-white z-20 w-full h-[517.69rem] overflow-hidden text-left text-[2rem] text-midnightblue-200 font-space-grotesk">
       <div className="absolute top-[1rem] left-[1.88rem] rounded-2xl box-border w-[22.5rem] flex flex-row items-center justify-between border-[1px] border-solid border-darkblue">
       <div className="p-15 rounded-tl-2xl rounded-tr-none rounded-br-none rounded-bl-2xl bg-mediumblue-200 flex flex-row items-center justify-start py-[0.5rem] px-[1rem] gap-[0.69rem]">
         <Image
