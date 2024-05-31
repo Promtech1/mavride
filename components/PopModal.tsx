@@ -57,8 +57,7 @@ const PopModal: React.FC<PopModalProps> = ({ delay, imageUrl }) => {
              Are you a qualified driver? Click below to join our team of drivers now!
             </p>
             <div className="text-center">
-              <Link className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 text-decoration-none" href="/applicationForm">
-
+              <Link className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 no-underline" href="/applicationform">
                   Get Started
               </Link>
                
