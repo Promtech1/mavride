@@ -72,7 +72,7 @@ const jobQualification = [
   { id: 6, qualification: "Previous experience preferred, but not required." },
   { id: 7, qualification: "High School Diploma or Equivalent." },
 ];
-const applicationform = () => {
+const Applicationform = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     middleName: "",
@@ -759,4 +759,4 @@ const applicationform = () => {
   );
 };
 
-export default applicationform;
+export default Applicationform;
